@@ -4,6 +4,7 @@
   --primary-color: hsl(204, 34%, 38%);
   --primary-light-color: hsl(204, 34%, 88%);
   --black-color: #333333;
+  --white-color: #ffffff;
 }
 
 *,
@@ -104,6 +105,17 @@ p {
 .arrow {
   color: var(--primary-color);
   font-size: 4rem;
+  width: 10rem;
+  height: 10rem;
+  display: grid;
+  place-items: center;
+  transform: rotate(45deg);
+  background-color: var(--primary-light-color);
+  margin-bottom: 5rem;
+}
+
+.arrow > div {
+  transform: rotate(-45deg);
 }
 
 .primary-light-background {
