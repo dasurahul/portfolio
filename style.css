@@ -13,6 +13,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
@@ -125,4 +129,31 @@ p {
   height: 100vh;
   background-color: var(--primary-light-color);
   z-index: -1;
+}
+
+.about {
+  width: 80%;
+  margin-inline: auto;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+}
+
+.about img {
+  width: 20rem;
+}
+
+.about > div h2 {
+  margin-bottom: 2rem;
+}
+
+.data {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.data > *:first-child {
+  font-weight: bold;
 }
