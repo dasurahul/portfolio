@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Rubik:wght@400;500;700&display=swap");
+
+:root {
+  --primary-color: hsl(204, 34%, 38%);
+  --primary-light-color: hsl(204, 34%, 88%);
+  --black-color: #333333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--black-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+.header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  width: 80%;
+  min-height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: var(--black-color);
+  position: relative;
+  transition: 0.25s;
+}
+
+.nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.1rem;
+  left: 0;
+  right: 0;
+  height: 0.2rem;
+  border-radius: 0.1rem;
+  background-color: var(--primary-color);
+  transform: scale(0);
+  transition: 0.25s;
+}
+
+.nav ul li a:hover::after {
+  transform: scale(1);
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.name,
+.trainee {
+  color: var(--primary-color);
+}
+
+.arrow {
+  color: var(--primary-color);
+  font-size: 4rem;
+}
+
+.primary-light-background {
+  position: absolute;
+  left: 0;
+  right: 50%;
+  height: 100vh;
+  background-color: var(--primary-light-color);
+  z-index: -1;
+}
