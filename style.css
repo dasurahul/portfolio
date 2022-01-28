@@ -223,6 +223,15 @@ p {
   position: relative;
 }
 
+.html::before {
+  content: attr(percentage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
 .html::after {
   content: "";
   position: absolute;
@@ -233,6 +242,15 @@ p {
   transform: rotate(45deg);
 }
 
+.css::before {
+  content: attr(percentage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
 .css::after {
   content: "";
   position: absolute;
@@ -241,6 +259,15 @@ p {
   border-left: 0.4rem solid transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+}
+
+.javascript::before {
+  content: attr(percentage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
 }
 
 .javascript::after {
@@ -254,14 +281,33 @@ p {
   transform: rotate(45deg);
 }
 
+.react::before {
+  content: attr(percentage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
+}
+
 .react::after {
   content: "";
   position: absolute;
   inset: -0.4rem;
   border: 0.4rem solid var(--primary-color);
+  border-bottom: 0.4rem solid transparent;
   border-left: 0.4rem solid transparent;
   border-radius: 50%;
   transform: rotate(45deg);
+}
+
+.bootstrap::before {
+  content: attr(percentage);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: bold;
 }
 
 .bootstrap::after {
