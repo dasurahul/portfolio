@@ -35,6 +35,10 @@ p {
   margin: 0;
 }
 
+img {
+  display: block;
+}
+
 .header {
   min-height: 100vh;
   display: flex;
@@ -173,7 +177,7 @@ p {
 
 .education {
   padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--gray-color);
+  border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
 }
 
@@ -183,7 +187,7 @@ p {
 
 .experience {
   padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--gray-color);
+  border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
 }
 
@@ -193,7 +197,7 @@ p {
 
 .skills {
   padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--gray-color);
+  border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -209,6 +213,17 @@ p {
   justify-content: space-around;
   padding-block: 2rem;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skill-logo {
+  width: 6rem;
 }
 
 .html,
@@ -322,7 +337,7 @@ p {
 
 .badges {
   padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--gray-color);
+  border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
 }
 
@@ -336,10 +351,59 @@ p {
 
 .achievements {
   padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--gray-color);
+  border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
 }
 
 .achievements > *:not(:last-child) {
   margin-bottom: 1rem;
+}
+
+.projects {
+  width: 80%;
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+}
+
+.projects-grid a {
+  position: relative;
+}
+
+.projects-grid img {
+  height: 18rem;
+  width: 18rem;
+  object-fit: cover;
+}
+
+.projects-grid a::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.projects-grid a:hover::before {
+  background-color: var(--primary-color);
+}
+
+.projects-grid a:hover::after {
+  content: attr(project-name);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: var(--white-color);
+  font-weight: bold;
 }
