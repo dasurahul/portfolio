@@ -374,6 +374,7 @@ img {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   justify-items: center;
+  gap: 2rem;
 }
 
 .projects-grid a {
