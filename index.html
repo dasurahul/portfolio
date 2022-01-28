@@ -29,7 +29,7 @@
         <div class="header-text" data-aos="fade-up">
             <h3>HELLO! I AM</h3>
             <h1 class="name">Rahul</h1>
-            <h2>I am a <span class="position">Trainee</span></h2>
+            <h2>I am a <span class="position" id="position"></span></h2>
         </div>
         <div class="arrow">
             <div>&#8595;</div>
@@ -126,6 +126,14 @@
             </div>
         </div>
     </div>
+    <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
+    <script>
+        new TypeIt("#position", {
+            strings: "Trainee",
+            speed: 200,
+            loop: true
+        }).go();
+    </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
         AOS.init();
