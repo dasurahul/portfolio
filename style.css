@@ -5,6 +5,7 @@
   --primary-light-color: hsl(204, 34%, 88%);
   --black-color: #333333;
   --white-color: #ffffff;
+  --gray-color: #777777;
 }
 
 *,
@@ -157,4 +158,58 @@ p {
 
 .data > *:first-child {
   font-weight: bold;
+}
+
+.resume {
+  width: 80%;
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+.resume h2 {
+  margin-bottom: 2rem;
+}
+
+.education {
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--gray-color);
+  margin-bottom: 2rem;
+}
+
+.education > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.skills {
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--gray-color);
+  margin-bottom: 2rem;
+}
+
+.skills > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.badges {
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--gray-color);
+  margin-bottom: 2rem;
+}
+
+.badges > *:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.gray {
+  color: var(--gray-color);
+}
+
+.achievements {
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--gray-color);
+  margin-bottom: 2rem;
+}
+
+.achievements > *:not(:last-child) {
+  margin-bottom: 1rem;
 }
