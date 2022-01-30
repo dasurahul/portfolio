@@ -40,6 +40,14 @@ img {
   display: block;
 }
 
+.gray {
+  color: var(--gray-color);
+}
+
+.small {
+  font-size: 0.8rem;
+}
+
 .header {
   min-height: 100vh;
   display: flex;
@@ -159,6 +167,9 @@ img {
 .data {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+
+.data:not(:last-child) {
   margin-bottom: 0.5rem;
 }
 
@@ -203,10 +214,6 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
-}
-
-.skills > *:not(:last-child) {
-  margin-bottom: 1rem;
 }
 
 .skill {
@@ -346,10 +353,6 @@ img {
   margin-bottom: 1rem;
 }
 
-.gray {
-  color: var(--gray-color);
-}
-
 .achievements {
   padding-bottom: 1rem;
   border-bottom: 0.05rem solid var(--light-gray-color);
@@ -373,7 +376,6 @@ img {
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
   gap: 2rem;
 }
 
@@ -382,9 +384,7 @@ img {
 }
 
 .projects-grid img {
-  height: 18rem;
-  width: 18rem;
-  object-fit: cover;
+  width: 100%;
 }
 
 .projects-grid a::before {
@@ -460,6 +460,9 @@ img {
 .contact > div {
   display: flex;
   gap: 1rem;
+}
+
+.contact > div:not(:last-child) {
   margin-bottom: 1rem;
 }
 
