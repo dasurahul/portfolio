@@ -409,3 +409,61 @@ img {
   color: var(--white-color);
   font-weight: bold;
 }
+
+.footer {
+  background-color: #000000;
+  color: var(--light-gray-color);
+}
+
+.footer-content {
+  width: 80%;
+  margin-inline: auto;
+  padding-block: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.social-profiles h3 {
+  margin-bottom: 2rem;
+}
+
+.profile-picture {
+  width: 3rem;
+  height: 3rem;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.social-profiles p {
+  margin-bottom: 1rem;
+}
+
+.social-profiles > div {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-icon {
+  width: 1.5rem;
+  filter: grayscale(1) invert(1);
+}
+
+.quotation h3 {
+  margin-bottom: 2rem;
+}
+
+.contact h3 {
+  margin-bottom: 2rem;
+}
+
+.contact > div {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact img {
+  width: 1.5rem;
+  filter: grayscale(1) invert(1);
+}
