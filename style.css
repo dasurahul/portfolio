@@ -48,7 +48,7 @@ img {
   font-size: 0.8rem;
 }
 
-@keyframes updown {
+@keyframes downup {
   50% {
     transform: translateY(1rem);
   }
@@ -144,7 +144,7 @@ img {
 }
 
 .arrow > div > div {
-  animation-name: updown;
+  animation-name: downup;
   animation-duration: 1s;
   animation-iteration-count: infinite;
 }
@@ -170,6 +170,10 @@ img {
 
 .about img {
   width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 50%;
 }
 
 .about > div h2 {
@@ -397,6 +401,7 @@ img {
 
 .projects-grid img {
   width: 100%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .projects-grid a::before {
@@ -404,7 +409,6 @@ img {
   position: absolute;
   inset: 0;
   opacity: 0.5;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
 }
 
 .projects-grid a:hover::before {
