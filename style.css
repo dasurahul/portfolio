@@ -170,10 +170,7 @@ img {
 
 .about img {
   width: 20rem;
-  height: 20rem;
-  object-fit: cover;
-  object-position: top;
-  border-radius: 50%;
+  border-radius: 0.25rem;
 }
 
 .about > div h2 {
