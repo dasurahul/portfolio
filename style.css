@@ -48,6 +48,12 @@ img {
   font-size: 0.8rem;
 }
 
+@keyframes updown {
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
 .header {
   min-height: 100vh;
   display: flex;
@@ -135,6 +141,12 @@ img {
 
 .arrow > div {
   transform: rotate(-45deg);
+}
+
+.arrow > div > div {
+  animation-name: updown;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
 
 .primary-light-background {
