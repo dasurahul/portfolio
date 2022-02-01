@@ -171,6 +171,7 @@ img {
 .about img {
   width: 20rem;
   border-radius: 0.25rem;
+  background-color: var(--primary-light-color);
 }
 
 .about > div h2 {
@@ -445,6 +446,7 @@ img {
   height: 3rem;
   object-fit: cover;
   border-radius: 50%;
+  background-color: var(--white-color);
   margin-bottom: 1rem;
 }
 
