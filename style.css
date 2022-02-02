@@ -485,3 +485,9 @@ img {
   width: 1.5rem;
   filter: grayscale(1) invert(1);
 }
+
+@media (max-width: 55rem) {
+  .nav {
+    display: none;
+  }
+}
