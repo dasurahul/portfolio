@@ -506,4 +506,14 @@ img {
   .menu-button {
     display: block;
   }
+  .about {
+    width: 90%;
+  }
+  .about img {
+    display: none;
+  }
+  .data {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
 }
