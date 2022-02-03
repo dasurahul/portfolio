@@ -523,4 +523,8 @@ img {
   .projects {
     width: 90%;
   }
+  .footer-content {
+    flex-direction: column;
+    gap: 3rem;
+  }
 }
