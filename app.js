@@ -8,9 +8,25 @@ const phoneNumber = "+91 9337 086 565";
 
 document.querySelector(".logo div").innerHTML = name;
 document.querySelector(".name").innerHTML = name;
-document.querySelector(".full-name").innerHTML = fullName;
+const fullNamePlace = document.querySelectorAll(".full-name");
 document.querySelector(".date-of-birth").innerHTML = dateOfBirth;
-document.querySelector(".address").innerHTML = address;
+const addressPlace = document.querySelectorAll(".address");
 document.querySelector(".pin-code").innerHTML = pinCode;
-document.querySelector(".email-address").innerHTML = emailAddress;
-document.querySelector(".phone-number").innerHTML = phoneNumber;
+const emailAddressPlace = document.querySelectorAll(".email-address");
+const phoneNumberPlace = document.querySelectorAll(".phone-number");
+
+fullNamePlace.forEach((eachPlace) => {
+  eachPlace.innerHTML = fullName;
+});
+
+addressPlace.forEach((eachPlace) => {
+  eachPlace.innerHTML = address;
+});
+
+phoneNumberPlace.forEach((eachPlace) => {
+  eachPlace.innerHTML = phoneNumber;
+});
+
+emailAddressPlace.forEach((eachPlace) => {
+  eachPlace.innerHTML = emailAddress;
+});
