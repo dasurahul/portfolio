@@ -236,7 +236,7 @@ img {
   border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 4rem;
 }
 
@@ -383,7 +383,7 @@ img {
   margin-bottom: 2rem;
 }
 
-.achievements > *:not(:last-child) {
+.achievements > * > *:not(:last-child) {
   margin-bottom: 1rem;
 }
 
@@ -391,6 +391,7 @@ img {
   width: 80%;
   margin-inline: auto;
   min-height: 100vh;
+  padding-bottom: 2rem;
 }
 
 .projects h2 {
@@ -399,7 +400,7 @@ img {
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: 2rem;
 }
 
@@ -515,5 +516,11 @@ img {
   .data {
     grid-template-columns: 1fr;
     gap: 0.5rem;
+  }
+  .resume {
+    width: 90%;
+  }
+  .projects {
+    width: 90%;
   }
 }
