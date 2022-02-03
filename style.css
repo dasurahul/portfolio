@@ -524,6 +524,7 @@ img {
     width: 90%;
   }
   .footer-content {
+    width: 90%;
     flex-direction: column;
     gap: 3rem;
   }
