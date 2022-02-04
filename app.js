@@ -5,6 +5,8 @@ const address = "Bhanjanagar, Odisha";
 const pinCode = "761126";
 const emailAddress = "dasurahul598@gmail.com";
 const phoneNumber = "+91 9337 086 565";
+const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
+const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
   "I believe that whatever doesn't kill you, simply makes you stranger.";
 
@@ -16,6 +18,8 @@ const addressPlace = document.querySelectorAll(".address");
 document.querySelector(".pin-code").innerHTML = pinCode;
 const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
+document.querySelector(".linkedin").href = linkedInProfileUrl;
+document.querySelector(".github").href = githubProfileUrl;
 document.querySelector(".quotation p").innerHTML = quotation;
 
 fullNamePlace.forEach((eachPlace) => {
