@@ -12,7 +12,13 @@ const educations = [
     university: "Berhampur University",
   },
 ];
-
+const experiences = [
+  {
+    year: "2022 Jan 31 - Present",
+    name: "Trainee - Software Development",
+    at: "Kellton Tech Solutions Limited",
+  },
+];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
 const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
@@ -27,6 +33,7 @@ document.querySelector(".pin-code").innerHTML = pinCode;
 const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
+const experiencesContainer = document.querySelector(".experiences");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
 document.querySelector(".github").href = githubProfileUrl;
 document.querySelector(".quotation p").innerHTML = quotation;
@@ -59,4 +66,18 @@ educations.forEach((education) => {
   universityDiv.innerHTML = education.university;
   educationDiv.append(yearDiv, nameDiv, universityDiv);
   educationsContainer.append(educationDiv);
+});
+
+experiences.forEach((experience) => {
+  const experienceDiv = document.createElement("div");
+  experienceDiv.classList.add("experience");
+  const yearDiv = document.createElement("div");
+  yearDiv.innerHTML = "<strong>" + experience.year + "</strong>";
+  const nameDiv = document.createElement("div");
+  nameDiv.innerHTML = "<strong>" + experience.name + "</strong>";
+  const atDiv = document.createElement("div");
+  atDiv.classList.add("gray");
+  atDiv.innerHTML = experience.at;
+  experienceDiv.append(yearDiv, nameDiv, atDiv);
+  experiencesContainer.append(experienceDiv);
 });
