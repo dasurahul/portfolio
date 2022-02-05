@@ -378,6 +378,9 @@ img {
 }
 
 .achievements {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   padding-bottom: 1rem;
   border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
