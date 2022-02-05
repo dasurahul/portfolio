@@ -19,6 +19,12 @@ const experiences = [
     at: "Kellton Tech Solutions Limited",
   },
 ];
+const achievements = [
+  {
+    title: "Frontendmentor Projects",
+    description: "Completed 6 projects in frontendmentor.io",
+  },
+];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
 const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
@@ -34,6 +40,7 @@ const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
+const achievementsContainer = document.querySelector(".achievements");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
 document.querySelector(".github").href = githubProfileUrl;
 document.querySelector(".quotation p").innerHTML = quotation;
@@ -80,4 +87,17 @@ experiences.forEach((experience) => {
   atDiv.innerHTML = experience.at;
   experienceDiv.append(yearDiv, nameDiv, atDiv);
   experiencesContainer.append(experienceDiv);
+});
+
+achievements.forEach((achievement) => {
+  const achievementDiv = document.createElement("div");
+  achievementDiv.classList.add("achievement");
+  const titleDiv = document.createElement("div");
+  titleDiv.innerHTML = "<strong>" + achievement.title + "</strong>";
+  const descriptionDiv = document.createElement("div");
+  descriptionDiv.classList.add("gray");
+  descriptionDiv.classList.add("small");
+  descriptionDiv.innerHTML = achievement.description;
+  achievementDiv.append(titleDiv, descriptionDiv);
+  achievementsContainer.append(achievementDiv);
 });
