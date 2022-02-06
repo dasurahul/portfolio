@@ -19,6 +19,16 @@ const experiences = [
     at: "Kellton Tech Solutions Limited",
   },
 ];
+const badges = [
+  {
+    name: "CSS",
+    description: "LinkedIn Skill Assessment Badge",
+  },
+  {
+    name: "React.js",
+    description: "LinkedIn Skill Assessment Badge",
+  },
+];
 const achievements = [
   {
     title: "Frontendmentor Projects",
@@ -40,6 +50,7 @@ const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
+const badgesContainer = document.querySelector(".badges");
 const achievementsContainer = document.querySelector(".achievements");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
 document.querySelector(".github").href = githubProfileUrl;
@@ -87,6 +98,18 @@ experiences.forEach((experience) => {
   atDiv.innerHTML = experience.at;
   experienceDiv.append(yearDiv, nameDiv, atDiv);
   experiencesContainer.append(experienceDiv);
+});
+
+badges.forEach((badge) => {
+  const badgeDiv = document.createElement("div");
+  const nameDiv = document.createElement("strong");
+  nameDiv.innerHTML = badge.name;
+  const descriptionDiv = document.createElement("span");
+  descriptionDiv.classList.add("gray");
+  descriptionDiv.classList.add("small");
+  descriptionDiv.innerHTML = " - " + badge.description;
+  badgeDiv.append(nameDiv, descriptionDiv);
+  badgesContainer.append(badgeDiv);
 });
 
 achievements.forEach((achievement) => {
