@@ -28,11 +28,19 @@ const badges = [
     name: "React.js",
     description: "LinkedIn Skill Assessment Badge",
   },
+  {
+    name: "JavaScript",
+    description: "Silver Badge from HackerRank",
+  },
 ];
 const achievements = [
   {
     title: "Frontendmentor Projects",
-    description: "Completed 6 projects in frontendmentor.io",
+    description: "Completed 6 projects from frontendmentor.io",
+  },
+  {
+    title: "HackerRank Certificate",
+    description: "Got CSS Certificate from HackerRank",
   },
 ];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
