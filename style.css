@@ -125,13 +125,17 @@ img {
 }
 
 .menu {
-  display: none;
   position: absolute;
   inset: 0;
   padding: 1rem;
   border-radius: 0.25rem;
   background-color: #000000;
   z-index: 1;
+  display: grid;
+  place-items: center;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: 0.25s;
 }
 
 .menu ul {
@@ -165,8 +169,7 @@ img {
 }
 
 .open {
-  display: grid;
-  place-items: center;
+  transform: scaleY(1);
 }
 
 .header-text {
