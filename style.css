@@ -69,6 +69,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 
 .logo {
@@ -122,6 +123,40 @@ img {
 
 .menu-button img {
   width: 1.5rem;
+}
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  background-color: var(--black-color);
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  text-align: center;
+}
+
+.menu ul li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+
+.open {
+  display: block;
 }
 
 .header-text {
