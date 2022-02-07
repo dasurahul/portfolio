@@ -139,3 +139,8 @@ const menu = document.querySelector(".menu");
 menuButton.addEventListener("click", () => {
   menu.classList.add("open");
 });
+
+const closeButton = document.querySelector(".menu-close-button");
+closeButton.addEventListener("click", () => {
+  menu.classList.remove("open");
+});
