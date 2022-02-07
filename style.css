@@ -69,7 +69,6 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
 }
 
 .logo {
@@ -128,12 +127,11 @@ img {
 .menu {
   display: none;
   position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
+  inset: 0;
   padding: 1rem;
   border-radius: 0.25rem;
-  background-color: var(--black-color);
+  background-color: #000000;
+  z-index: 1;
 }
 
 .menu ul {
@@ -155,8 +153,16 @@ img {
   color: var(--white-color);
 }
 
+.menu ul li button {
+  background-color: transparent;
+  color: var(--white-color);
+  border: none;
+  font-size: 1rem;
+}
+
 .open {
-  display: block;
+  display: grid;
+  place-items: center;
 }
 
 .header-text {
