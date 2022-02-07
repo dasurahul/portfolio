@@ -137,5 +137,5 @@ const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 
 menuButton.addEventListener("click", () => {
-  menu.classList.toggle("open");
+  menu.classList.add("open");
 });
