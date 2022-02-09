@@ -43,6 +43,53 @@ const achievements = [
     description: "Got CSS Certificate from HackerRank",
   },
 ];
+const projects = [
+  {
+    title: "NFT Preview Card Component",
+    href: "https://zen-feynman-768415.netlify.app",
+    src: "images/nft-preview-card-component.png",
+  },
+  {
+    title: "Sunnyside Agency Landing Page",
+    href: "https://sunnyside-agency-rahul.netlify.app",
+    src: "images/sunnyside-agency-landing-page.png",
+  },
+  {
+    title: "Huddle Landing Page",
+    href: "https://huddle-landing-page-with-alternating-feature-blocks-by-rahul.netlify.app",
+    src: "images/huddle-landing-page.png",
+  },
+  {
+    title: "Photos App",
+    href: "https://rahul-photos-app.netlify.app",
+    src: "images/photos-app.png",
+  },
+  {
+    title: "AIRY Hotels",
+    href: "https://airy-hotels.netlify.app",
+    src: "images/airy-hotels.png",
+  },
+  {
+    title: "Loopstudios Landing Page",
+    href: "https://loop-studios-landing-page-by-rahul.netlify.app",
+    src: "images/loopstudios-landing-page.png",
+  },
+  {
+    title: "Sneakers Page",
+    href: "https://sneakers-company.netlify.app",
+    src: "images/sneakers.png",
+  },
+  {
+    title: "Contact Form Component",
+    href: "https://rahul-contact-form.netlify.app",
+    src: "images/contact-form.png",
+  },
+  {
+    title: "Portfolio",
+    href: "index.html",
+    src: "images/portfolio.png",
+  },
+];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
 const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
