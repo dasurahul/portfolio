@@ -107,6 +107,7 @@ const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
 const badgesContainer = document.querySelector(".badges");
 const achievementsContainer = document.querySelector(".achievements");
+const projectsContainer = document.querySelector(".projects-grid");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
 document.querySelector(".github").href = githubProfileUrl;
 document.querySelector(".quotation p").innerHTML = quotation;
@@ -190,4 +191,16 @@ menuButton.addEventListener("click", () => {
 const closeButton = document.querySelector(".menu-close-button");
 closeButton.addEventListener("click", () => {
   menu.classList.remove("open");
+});
+
+projects.forEach((project) => {
+  const projectContainer = document.createElement("a");
+  projectContainer.href = project.href;
+  projectContainer.target = "_blank";
+  projectContainer.dataset.projectname = project.title;
+  const image = document.createElement("img");
+  image.src = project.src;
+  image.alt = project.title;
+  projectContainer.append(image);
+  projectsContainer.append(projectContainer);
 });
