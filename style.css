@@ -476,7 +476,7 @@ img {
 }
 
 .projects-grid a:hover::after {
-  content: attr(project-name);
+  content: attr(data-projectname);
   position: absolute;
   top: 50%;
   left: 50%;
