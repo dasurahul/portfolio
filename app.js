@@ -14,7 +14,7 @@ const educations = [
 ];
 const experiences = [
   {
-    year: "2022 Jan 31 - Present",
+    year: "2022 Feb 14 - Present",
     name: "Trainee - Software Development",
     at: "Kellton Tech Solutions Limited",
   },
