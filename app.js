@@ -35,12 +35,12 @@ const badges = [
 ];
 const achievements = [
   {
-    title: "Frontendmentor Projects",
-    description: "Completed 6 projects from frontendmentor.io",
-  },
-  {
     title: "HackerRank Certificate",
     description: "Got CSS Certificate from HackerRank",
+  },
+  {
+    title: "Frontendmentor Projects",
+    description: "Completed 6 projects from frontendmentor.io",
   },
 ];
 const projects = [
