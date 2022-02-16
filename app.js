@@ -35,8 +35,12 @@ const badges = [
 ];
 const achievements = [
   {
-    title: "HackerRank Certificate",
+    title: "CSS Certificate",
     description: "Got CSS Certificate from HackerRank",
+  },
+  {
+    title: "React.js Certificate",
+    description: "Got React.js Certificate from HackerRank",
   },
   {
     title: "Frontendmentor Projects",
