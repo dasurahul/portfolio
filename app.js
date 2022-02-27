@@ -47,7 +47,7 @@ const achievements = [
     description: "Completed 6 projects from frontendmentor.io",
   },
   {
-    title: "AWS Course Completion Certificate",
+    title: "AWS Certificate",
     description: "Got AWS Partner: Accreditation (Technical) Certificate",
   },
 ];
