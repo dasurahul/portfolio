@@ -32,10 +32,6 @@ const badges = [
     name: "JavaScript",
     description: "Silver Badge from HackerRank",
   },
-  {
-    name: "AWS Partner: Accreditation (Technical)",
-    description: "Issued by Amazon Web Services Training and Certification",
-  },
 ];
 const achievements = [
   {
