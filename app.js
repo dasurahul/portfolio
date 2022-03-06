@@ -140,8 +140,8 @@ const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
-const badgesContainer = document.querySelector(".badges");
 const skillsContainer = document.querySelector(".skills");
+const badgesContainer = document.querySelector(".badges");
 const achievementsContainer = document.querySelector(".achievements");
 const projectsContainer = document.querySelector(".projects-grid");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
@@ -190,6 +190,31 @@ experiences.forEach((experience) => {
   atDiv.innerHTML = experience.at;
   experienceDiv.append(yearDiv, nameDiv, atDiv);
   experiencesContainer.append(experienceDiv);
+});
+
+skills.forEach((skill) => {
+  const skillDiv = document.createElement("div");
+  skillDiv.classList.add("skill");
+  const colDiv = document.createElement("div");
+  colDiv.classList.add("col");
+  const nameDiv = document.createElement("div");
+  const strongDiv = document.createElement("strong");
+  strongDiv.innerHTML = skill.name;
+  nameDiv.append(strongDiv);
+  const imageDiv = document.createElement("div");
+  const image = document.createElement("img");
+  image.src = skill.img;
+  image.alt = skill.name;
+  image.classList.add("skill-logo");
+  imageDiv.append(image);
+  colDiv.append(nameDiv);
+  colDiv.append(imageDiv);
+  skillDiv.append(colDiv);
+  const percentageDiv = document.createElement("div");
+  percentageDiv.dataset.percentage = skill.percentage;
+  percentageDiv.classList.add("skill-percentage");
+  skillDiv.append(percentageDiv);
+  skillsContainer.append(skillDiv);
 });
 
 badges.forEach((badge) => {
