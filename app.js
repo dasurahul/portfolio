@@ -19,6 +19,33 @@ const experiences = [
     at: "Kellton Tech Solutions Limited",
   },
 ];
+const skills = [
+  {
+    name: "HTML",
+    img: "images/html.png",
+    percentage: "75%",
+  },
+  {
+    name: "CSS",
+    img: "images/css.png",
+    percentage: "75%",
+  },
+  {
+    name: "JavaScript",
+    img: "images/javascript.png",
+    percentage: "50%",
+  },
+  {
+    name: "React.js",
+    img: "images/react.png",
+    percentage: "50%",
+  },
+  {
+    name: "Bootstrap",
+    img: "images/bootstrap.png",
+    percentage: "75%",
+  },
+];
 const badges = [
   {
     name: "CSS",
