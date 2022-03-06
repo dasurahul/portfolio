@@ -141,6 +141,7 @@ const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
 const badgesContainer = document.querySelector(".badges");
+const skillsContainer = document.querySelector(".skills");
 const achievementsContainer = document.querySelector(".achievements");
 const projectsContainer = document.querySelector(".projects-grid");
 document.querySelector(".linkedin").href = linkedInProfileUrl;
