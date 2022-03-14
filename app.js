@@ -124,11 +124,6 @@ const projects = [
     href: "https://rahul-contact-form.netlify.app",
     src: "images/contact-form.png",
   },
-  {
-    title: "Portfolio",
-    href: "index.html",
-    src: "images/portfolio.png",
-  },
 ];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
 const githubProfileUrl = "https://www.github.com/dasurahul";
