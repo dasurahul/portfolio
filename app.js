@@ -85,6 +85,11 @@ const projects = [
     src: "images/nft-preview-card-component.png",
   },
   {
+    title: "Advice Generator App",
+    href: "https://advice-generator-by-rahul.netlify.app",
+    src: "images/advice-generator-app.png",
+  },
+  {
     title: "Sunnyside Agency Landing Page",
     href: "https://sunnyside-agency-rahul.netlify.app",
     src: "images/sunnyside-agency-landing-page.png",
