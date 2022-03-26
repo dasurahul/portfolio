@@ -105,6 +105,11 @@ const projects = [
     src: "images/photos-app.png",
   },
   {
+    title: "YelpCamp",
+    href: "https://yelpcamp-rahul.netlify.app",
+    src: "images/yelpcamp.PNG",
+  },
+  {
     title: "AIRY Hotels",
     href: "https://airy-hotels.netlify.app",
     src: "images/airy-hotels.png",
