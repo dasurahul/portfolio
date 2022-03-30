@@ -125,9 +125,9 @@ const projects = [
     src: "images/sneakers.png",
   },
   {
-    title: "Contact Form Component",
-    href: "https://rahul-contact-form.netlify.app",
-    src: "images/contact-form.png",
+    title: "Intro component with signup form",
+    href: "https://signup-form-rahul.netlify.app",
+    src: "images/signup-form.PNG",
   },
 ];
 const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
