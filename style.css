@@ -3,6 +3,7 @@
 
 :root {
   --primary-color: #406782;
+  --primary-dark-color: #2f4b60;
   --primary-light-color: #d6e2eb;
   --black-color: #333333;
   --white-color: #ffffff;
@@ -39,6 +40,22 @@ p {
 
 img {
   display: block;
+}
+
+.secondary-heading {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-dark-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.25s;
+}
+
+.secondary-heading:hover {
+  transform: skew(5deg, 5deg);
 }
 
 .gray {
@@ -382,7 +399,7 @@ img {
   content: "";
   position: absolute;
   inset: 0;
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .projects-grid a:hover::before {
