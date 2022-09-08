@@ -1,14 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Yellowtail&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 :root {
-  --primary-color: #406782;
-  --primary-dark-color: #2f4b60;
-  --primary-light-color: #d6e2eb;
-  --black-color: #333333;
-  --white-color: #ffffff;
-  --gray-color: #777777;
-  --light-gray-color: #dddddd;
+  --primary-color: #238ca9;
+  --primary-dark-color: #0d3745;
+  --primary-light-color: #eef9fc;
+  --black-color: #333;
+  --white-color: #fff;
+  --gray-color: #777;
+  --light-gray-color: #ddd;
 }
 
 *,
@@ -25,7 +25,6 @@ body {
   margin: 0;
   font-family: "Poppins", sans-serif;
   color: var(--black-color);
-  letter-spacing: 0.025rem;
 }
 
 h1,
@@ -91,46 +90,46 @@ img {
 }
 
 .logo {
-  font-family: "Yellowtail", cursive;
+  font-family: "Lobster", cursive;
   color: var(--primary-color);
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .nav ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
   gap: 2rem;
 }
 
-.nav ul li a {
+.nav a:link,
+.nav a:visited {
   text-decoration: none;
   color: var(--black-color);
+  font-weight: 500;
   position: relative;
-  transition: 0.25s;
 }
 
-.nav ul li a:hover {
-  color: var(--primary-color);
-}
-
-.nav ul li a::after {
+.nav a::after {
   content: "";
   position: absolute;
-  bottom: -0.1rem;
+  bottom: -0.15rem;
   left: 0;
   right: 0;
-  height: 0.2rem;
-  border-radius: 0.1rem;
+  height: 0.15rem;
+  border-radius: 0.15rem;
   background-color: var(--primary-color);
   transform: scale(0);
-  transition: 0.25s;
+  transition: transform 0.25s linear;
 }
 
-.nav ul li a:hover::after {
+.nav a:hover::after,
+.nav a:focus::after {
   transform: scale(1);
+}
+
+.nav a:focus {
+  outline: none;
 }
 
 .menu-button {
@@ -139,78 +138,106 @@ img {
   border: none;
 }
 
+.menu-button:focus {
+  outline: none;
+}
+
 .menu-button img {
   width: 1.5rem;
 }
 
 .menu {
   position: absolute;
-  inset: 0;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  background-color: #000000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
   z-index: 1;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: scaleY(0);
   transform-origin: top;
-  transition: 0.25s;
+  transition: transform 0.25s linear;
 }
 
 .menu ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.menu ul li {
+.menu li {
   text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.menu ul li:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-.menu ul li a {
+.menu a:link,
+.menu a:visited {
   text-decoration: none;
   color: var(--white-color);
+  opacity: 0.8;
 }
 
-.menu ul li button {
+.menu button {
   background-color: transparent;
   color: var(--white-color);
+  font-size: 1.5rem;
+  opacity: 0.8;
   border: none;
-  font-size: 1rem;
-}
-
-.menu ul li button:hover {
-  cursor: pointer;
+  position: absolute;
+  top: 3rem;
+  right: 3rem;
 }
 
 .open {
   transform: scaleY(1);
 }
 
-.header-text {
+.header-text h1 {
   text-align: center;
+  font-weight: 500;
 }
 
-.header-text > *:not(:last-child) {
-  margin-bottom: 1rem;
+.header-text span {
+  display: block;
 }
 
-.name,
+.small {
+  font-size: 1.25rem;
+}
+
+.primary {
+  color: var(--primary-color);
+}
+
+.name {
+  font-weight: 600;
+}
+
+.big {
+  font-size: 4rem;
+}
+
+.normal {
+  font-size: 2.25rem;
+}
+
 .position {
   color: var(--primary-color);
+  text-decoration: underline;
 }
 
 .arrow {
   color: var(--primary-color);
-  font-size: 4rem;
+  font-size: 1.5rem;
   width: 10rem;
   height: 10rem;
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transform: rotate(45deg);
   background-color: var(--primary-light-color);
   margin-bottom: 5rem;
@@ -221,8 +248,7 @@ img {
 }
 
 .arrow > div > div {
-  animation-name: downup;
-  animation-duration: 1s;
+  animation: downup 1s linear 0s;
   animation-iteration-count: infinite;
 }
 

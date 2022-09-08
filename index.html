@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" type="text/css" href="loading-bar.css" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
     <title>Dasu Rahul</title>
 </head>
 
@@ -23,10 +23,11 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#resume">Resume</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
             <button class="menu-button">
-                <img src="./images/hamburger.png" alt="menu" />
+                <img src="images/hamburger.svg" alt="menu" />
             </button>
             <div class="menu">
                 <ul>
@@ -43,15 +44,18 @@
                         <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <button class="menu-close-button">Close</button>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
+                <button class="menu-close-button">&#10006;</button>
             </div>
         </div>
         <div class="header-text" data-aos="fade-up">
-            <h3>HELLO! I AM</h3>
-            <h1 class="name"></h1>
-            <h2>I am a <span class="position" id="position"></span></h2>
+            <h1>
+                <span class="small primary">HELLO, I AM</span>
+                <span class="name big"></span>
+                <span class="flex normal">I am a <span class="position" id="position"></span></span>
+            </h1>
         </div>
         <div class="arrow">
             <div>
@@ -159,7 +163,7 @@
     <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
     <script>
         new TypeIt("#position", {
-            strings: "Trainee",
+            strings: "Software Engineer",
             speed: 200,
             loop: true
         }).go();

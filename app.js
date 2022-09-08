@@ -8,13 +8,18 @@ const phoneNumber = "+91 9337 086 565";
 const educations = [
   {
     year: "2019 - 2022",
-    name: "Bachelor of Computer Application",
-    university: "Berhampur University",
+    name: "BCA",
+    college: "Bhanja College of Computer and Management",
   },
 ];
 const experiences = [
   {
-    year: "2022 Feb 14 - Present",
+    year: "2022 Aug - Present",
+    name: "Software Engineer",
+    at: "Kellton Tech Solutions Limited",
+  },
+  {
+    year: "2022 Feb - 2022 Aug",
     name: "Trainee - Software Development",
     at: "Kellton Tech Solutions Limited",
   },
@@ -66,8 +71,8 @@ const achievements = [
     description: "Got CSS Certificate from HackerRank",
   },
   {
-    title: "React.js Certificate",
-    description: "Got React.js Certificate from HackerRank",
+    title: "React Certificate",
+    description: "Got React Certificate from HackerRank",
   },
   {
     title: "Frontendmentor Projects",
@@ -130,7 +135,7 @@ const projects = [
     src: "images/signup-form.PNG",
   },
 ];
-const linkedInProfileUrl = "https://www.linkedin.com/in/rahul-dasu-3863b9218";
+const linkedInProfileUrl = "https://www.linkedin.com/in/dasu-rahul";
 const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
   "I believe that whatever doesn't kill you, simply makes you stranger.";
@@ -178,7 +183,7 @@ educations.forEach((education) => {
   nameDiv.innerHTML = "<strong>" + education.name + "</strong>";
   const universityDiv = document.createElement("div");
   universityDiv.classList.add("gray");
-  universityDiv.innerHTML = education.university;
+  universityDiv.innerHTML = education.college;
   educationDiv.append(yearDiv, nameDiv, universityDiv);
   educationsContainer.append(educationDiv);
 });
