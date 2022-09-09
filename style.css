@@ -37,39 +37,12 @@ p {
   margin: 0;
 }
 
+ul {
+  padding: 0;
+}
+
 img {
   display: block;
-}
-
-.secondary-heading {
-  display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    var(--primary-dark-color),
-    var(--primary-color)
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: 0.25s;
-}
-
-.secondary-heading:hover {
-  transform: skew(-5deg, -5deg);
-  text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
-.gray {
-  color: var(--gray-color);
-}
-
-.small {
-  font-size: 0.8rem;
-}
-
-@keyframes downup {
-  50% {
-    transform: translateY(1rem);
-  }
 }
 
 .header {
@@ -138,10 +111,6 @@ img {
   border: none;
 }
 
-.menu-button:focus {
-  outline: none;
-}
-
 .menu-button img {
   width: 1.5rem;
 }
@@ -159,12 +128,16 @@ img {
   align-items: center;
   transform: scaleY(0);
   transform-origin: top;
-  transition: transform 0.25s linear;
+  transition: transform 0.5s linear;
+}
+
+.menu > * {
+  opacity: 0;
+  transition: opacity 0.5s linear 0.5s;
 }
 
 .menu ul {
   list-style: none;
-  padding: 0;
 }
 
 .menu li {
@@ -185,15 +158,31 @@ img {
   background-color: transparent;
   color: var(--white-color);
   font-size: 1.5rem;
-  opacity: 0.8;
   border: none;
   position: absolute;
   top: 3rem;
   right: 3rem;
+  opacity: 0;
 }
 
-.open {
+.opened {
   transform: scaleY(1);
+}
+
+.opened > ul,
+.opened > button {
+  opacity: 1;
+}
+
+.closed {
+  transform: scaleY(0);
+  transition-delay: 1s;
+}
+
+.closed > ul,
+.closed > button {
+  opacity: 0;
+  transition-delay: 0s;
 }
 
 .header-text h1 {
@@ -248,7 +237,7 @@ img {
 }
 
 .arrow > div > div {
-  animation: downup 1s linear 0s;
+  animation: arrow 1s linear;
   animation-iteration-count: infinite;
 }
 
@@ -259,6 +248,27 @@ img {
   height: 100vh;
   background-color: var(--primary-light-color);
   z-index: -1;
+}
+
+.secondary-heading {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-dark-color),
+    var(--primary-color)
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  transition: 0.25s;
+}
+
+.secondary-heading:hover {
+  transform: skew(-5deg, -5deg);
+  text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+}
+
+.gray {
+  color: var(--gray-color);
 }
 
 .about {
@@ -536,5 +546,11 @@ img {
     width: 90%;
     flex-direction: column;
     gap: 3rem;
+  }
+}
+
+@keyframes arrow {
+  50% {
+    transform: translateY(1rem);
   }
 }

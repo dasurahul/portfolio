@@ -256,12 +256,14 @@ const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 
 menuButton.addEventListener("click", () => {
-  menu.classList.add("open");
+  menu.classList.remove("closed");
+  menu.classList.add("opened");
 });
 
 const closeButton = document.querySelector(".menu-close-button");
 closeButton.addEventListener("click", () => {
-  menu.classList.remove("open");
+  menu.classList.add("closed");
+  menu.classList.remove("opened");
 });
 
 projects.forEach((project) => {
