@@ -185,6 +185,11 @@ img {
   transition-delay: 0s;
 }
 
+.header-text {
+  position: relative;
+  z-index: 1;
+}
+
 .header-text h1 {
   text-align: center;
   font-weight: 500;
