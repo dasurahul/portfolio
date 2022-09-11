@@ -55,9 +55,16 @@ const skillsContainer = document.querySelector(".skills");
 
 const educations = [
   {
+    image: "images/building-columns-solid.svg",
     year: "2019 - 2022",
     name: "BCA",
     college: "Bhanja College of Computer and Management",
+  },
+  {
+    image: "images/building-columns-solid.svg",
+    year: "2017 - 2019",
+    name: "10+2",
+    college: "KSUB College",
   },
 ];
 
@@ -290,17 +297,21 @@ experiences.forEach((experience) => {
 });
 
 educations.forEach((education) => {
-  const educationDiv = document.createElement("div");
-  educationDiv.classList.add("education");
-  const yearDiv = document.createElement("div");
-  yearDiv.innerHTML = "<strong>" + education.year + "</strong>";
-  const nameDiv = document.createElement("div");
-  nameDiv.innerHTML = "<strong>" + education.name + "</strong>";
-  const universityDiv = document.createElement("div");
-  universityDiv.classList.add("gray");
-  universityDiv.innerHTML = education.college;
-  educationDiv.append(yearDiv, nameDiv, universityDiv);
-  educationsContainer.append(educationDiv);
+  const educationContainer = document.createElement("div");
+  educationContainer.classList.add("education");
+  const image = document.createElement("img");
+  image.src = education.image;
+  image.alt = education.college;
+  const container = document.createElement("div");
+  const yearContainer = document.createElement("div");
+  yearContainer.innerText = education.year;
+  const nameContainer = document.createElement("div");
+  nameContainer.innerText = education.name;
+  const collegeContainer = document.createElement("div");
+  collegeContainer.innerText = education.college;
+  container.append(yearContainer, nameContainer, collegeContainer);
+  educationContainer.append(image, container);
+  educationsContainer.append(educationContainer);
 });
 
 // skills.forEach((skill) => {

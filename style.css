@@ -402,31 +402,40 @@ img {
   position: relative;
 }
 
-.education {
-  padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--light-gray-color);
-  margin-bottom: 2rem;
-}
-
-.education > *:not(:last-child) {
-  margin-bottom: 1rem;
-}
-
-/* 
-.skills {
-  padding-bottom: 1rem;
-  border-bottom: 0.05rem solid var(--light-gray-color);
-  margin-bottom: 2rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
-  gap: 4rem;
-}
-
-.skill {
+.educations {
   display: flex;
-  justify-content: space-around;
-  padding-block: 2rem;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--light-gray-color);
+  margin-bottom: 2rem;
+}
+
+.education {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.education img {
+  width: 2rem;
+}
+
+.education > div > div:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.education > div > div:nth-child(1) {
+  color: var(--gray-color);
+  font-size: 0.8rem;
+}
+
+.education > div > div:nth-child(2) {
+  font-weight: 500;
+}
+
+.education > div > div:nth-child(3) {
+  color: var(--gray-color);
 }
 
 .col {
@@ -455,9 +464,8 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-} */
-
-.badges {
+}
+*/ .badges {
   padding-bottom: 1rem;
   border-bottom: 0.05rem solid var(--light-gray-color);
   margin-bottom: 2rem;
