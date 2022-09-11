@@ -95,7 +95,6 @@ img {
   left: 0;
   right: 0;
   height: 0.15rem;
-  border-radius: 0.15rem;
   background-color: var(--primary-color);
   transform: scale(0);
   transition: transform 0.25s linear;
@@ -197,6 +196,7 @@ img {
 
 .header-text h1 {
   text-align: center;
+  font-size: 2.25rem;
   font-weight: 500;
 }
 
@@ -204,24 +204,12 @@ img {
   display: block;
 }
 
-.small {
-  font-size: 1.25rem;
-}
-
 .primary {
   color: var(--primary-color);
 }
 
-.name {
-  font-weight: 600;
-}
-
 .big {
-  font-size: 4rem;
-}
-
-.normal {
-  font-size: 2.25rem;
+  font-size: 3.5rem;
 }
 
 .position {
@@ -232,8 +220,8 @@ img {
 .arrow {
   color: var(--primary-color);
   font-size: 1.5rem;
-  width: 10rem;
-  height: 10rem;
+  width: 5rem;
+  height: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -264,15 +252,13 @@ img {
   width: 80%;
   margin-inline: auto;
   min-height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
 }
 
-.about img {
-  max-width: 20rem;
-  background-color: var(--primary-light-color);
+.about h2 {
+  align-self: flex-start;
+  margin-top: 2rem;
 }
 
 .secondary-heading {
@@ -295,19 +281,51 @@ img {
   text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
-.data {
+.me {
+  background-color: rgba(0, 0, 0, 0.035);
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.me > img {
+  max-width: 5rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.me > h3 {
+  font-weight: 400;
+  margin-bottom: 0.25rem;
+}
+
+.me > p {
+  font-weight: 200;
+  margin-bottom: 3rem;
+}
+
+.description {
+  margin-bottom: 2rem;
+}
+
+.description > p {
+  color: var(--gray-color);
+  line-height: 1.8;
   margin-bottom: 1rem;
 }
 
-.data h3 {
-  font-weight: 500;
+.social-links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }
 
-.data p {
-  font-weight: 300;
+.social-links img {
+  width: 2rem;
 }
 
 .resume {
@@ -378,7 +396,7 @@ img {
 }
 
 .progress {
-  width: 100px;
+  width: 6rem;
   margin-inline: auto;
   position: relative;
 }

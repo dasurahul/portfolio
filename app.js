@@ -1,8 +1,12 @@
 const name = "Rahul";
 const fullName = "Dasu Rahul";
-const dateOfBirth = "14 Dec, 2001";
+const designation = "Software Engineer";
+const descriptions = [
+  "I’m living the dream.",
+  "I’ve always been a great problem solver, an independent introvert, and a technophile obsessed with the latest devices. Today, I’m working from home as a software engineer for Kellton, and I get to show off all these elements of who I am.",
+  "I’m always adding new skills to my repertoire. I’m also eager to meet other software engineers.",
+];
 const address = "Bhanjanagar, Odisha";
-const pinCode = "761126";
 const emailAddress = "dasurahul598@gmail.com";
 const phoneNumber = "+91 9337 086 565";
 const experiences = [
@@ -19,6 +23,34 @@ const experiences = [
     company: "Kellton Tech Solutions Limited",
   },
 ];
+
+const socialLinks = [
+  {
+    name: "linkedin",
+    image: "images/linkedin.svg",
+    href: "https://linkedin.com/in/dasu-rahul",
+  },
+  {
+    name: "github",
+    image: "images/square-github.svg",
+    href: "https://github.com/dasurahul",
+  },
+  {
+    name: "hackerrank",
+    image: "images/hackerrank.svg",
+    href: "https://www.hackerrank.com/rock97456",
+  },
+];
+
+document.querySelector(".me h3").innerText = fullName;
+document.querySelector(".me p").innerText = designation;
+const descriptionContainer = document.querySelector(".description");
+descriptions.forEach((description) => {
+  const paragraph = document.createElement("p");
+  paragraph.innerText = description;
+  descriptionContainer.append(paragraph);
+});
+
 const skillsContainer = document.querySelector(".skills");
 
 const educations = [
@@ -28,6 +60,21 @@ const educations = [
     college: "Bhanja College of Computer and Management",
   },
 ];
+
+const socialLinksContainer = document.querySelector(".social-links");
+
+socialLinks.forEach((link) => {
+  const linkContainer = document.createElement("a");
+  linkContainer.href = link.href;
+  const image = document.createElement("img");
+  image.src = link.image;
+  image.alt = link.name;
+  linkContainer.append(image);
+  socialLinksContainer.append(linkContainer);
+});
+
+document.querySelector(".profile-picture").src = "images/profile-picture.png";
+document.querySelector(".profile-picture").alt = fullName;
 
 const skills = [
   {
@@ -194,12 +241,9 @@ const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation =
   "I believe that whatever doesn't kill you, simply makes you stranger.";
 
-document.querySelector(".logo div").innerHTML = name;
-document.querySelector(".name").innerHTML = name;
+document.querySelector(".logo div").innerText = name;
 const fullNamePlace = document.querySelectorAll(".full-name");
-document.querySelector(".date-of-birth").innerHTML = dateOfBirth;
 const addressPlace = document.querySelectorAll(".address");
-document.querySelector(".pin-code").innerHTML = pinCode;
 const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");

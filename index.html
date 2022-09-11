@@ -52,9 +52,8 @@
         </div>
         <div class="header-text" data-aos="fade-up">
             <h1>
-                <span class="primary small">HELLO, I AM</span>
-                <span class="name big"></span>
-                <span class="normal">I am a <span class="position" id="position"></span></span>
+                <span class="primary big">Hello World!</span>
+                <span>I am a <span class="position" id="position"></span></span>
             </h1>
         </div>
         <div class="arrow">
@@ -65,33 +64,17 @@
         <div class="primary-light-background"></div>
     </header>
     <main>
-        <div class="about" id="about">
-            <img src="images/profile-picture.png" alt="Dasu Rahul" />
-            <div data-aos="fade-up">
+        <div id="about">
+            <div class="about" data-aos="fade-up">
                 <h2 class="secondary-heading">About Me</h2>
-                <div class="data">
-                    <h3>Name:</h3>
-                    <p class="full-name"></p>
-                </div>
-                <div class="data">
-                    <h3>Date of birth:</h3>
-                    <p class="date-of-birth"></p>
-                </div>
-                <div class="data">
-                    <h3>Address:</h3>
-                    <p class="address"></p>
-                </div>
-                <div class="data">
-                    <h3>PIN code:</h3>
-                    <p class="pin-code"></p>
-                </div>
-                <div class="data">
-                    <h3>Email:</h3>
-                    <p class="email-address"></p>
-                </div>
-                <div class="data">
-                    <h3>Phone:</h3>
-                    <p class="phone-number"></p>
+                <div class="me">
+                    <img class="profile-picture" />
+                    <h3></h3>
+                    <p></p>
+                    <div class=" description">
+                    </div>
+                    <div class="social-links">
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,8 +86,8 @@
                 <h2 class="secondary-heading">Skills</h2>
                 <div class="skills">
                 </div>
+                <h2 class="secondary-heading">Education</h2>
                 <div class="educations">
-                    <h2 class="secondary-heading">Education</h2>
                 </div>
                 <div>
                     <h2 class="secondary-heading">Badges</h2>
@@ -161,7 +144,7 @@
     <script src="https://unpkg.com/typeit@8.2.0/dist/index.umd.js"></script>
     <script>
         new TypeIt("#position", {
-            strings: "Software Engineer",
+            strings: "Software Engineer.",
             speed: 200,
             loop: true
         }).go();
