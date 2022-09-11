@@ -4,7 +4,8 @@
 :root {
   --primary-color: #238ca9;
   --primary-dark-color: #0d3745;
-  --primary-light-color: #eef9fc;
+  --primary-light-color: #e9f4f6;
+  --primary-very-light-color: #f8fbfc;
   --black-color: #333;
   --white-color: #fff;
   --gray-color: #777;
@@ -282,7 +283,7 @@ img {
 }
 
 .me {
-  background-color: rgba(0, 0, 0, 0.035);
+  background-color: var(--primary-very-light-color);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -291,8 +292,8 @@ img {
 }
 
 .me > img {
-  max-width: 5rem;
-  aspect-ratio: 1/1;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
