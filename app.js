@@ -5,6 +5,20 @@ const address = "Bhanjanagar, Odisha";
 const pinCode = "761126";
 const emailAddress = "dasurahul598@gmail.com";
 const phoneNumber = "+91 9337 086 565";
+const experiences = [
+  {
+    image: "images/kellton.png",
+    time: "2022 August - Present",
+    title: "Software Engineer",
+    company: "Kellton Tech Solutions Limited",
+  },
+  {
+    image: "images/kellton.png",
+    time: "2022 February - 2022 August",
+    title: "Trainee - Software Development",
+    company: "Kellton Tech Solutions Limited",
+  },
+];
 const educations = [
   {
     year: "2019 - 2022",
@@ -12,18 +26,7 @@ const educations = [
     college: "Bhanja College of Computer and Management",
   },
 ];
-const experiences = [
-  {
-    year: "2022 Aug - Present",
-    name: "Software Engineer",
-    at: "Kellton Tech Solutions Limited",
-  },
-  {
-    year: "2022 Feb - 2022 Aug",
-    name: "Trainee - Software Development",
-    at: "Kellton Tech Solutions Limited",
-  },
-];
+
 const skills = [
   {
     name: "HTML",
@@ -174,6 +177,24 @@ phoneNumberPlace.forEach((eachPlace) => {
   eachPlace.innerHTML = phoneNumber;
 });
 
+experiences.forEach((experience) => {
+  const experienceContainer = document.createElement("div");
+  experienceContainer.classList.add("experience");
+  const image = document.createElement("img");
+  image.src = experience.image;
+  image.alt = experience.company;
+  const container = document.createElement("div");
+  const time = document.createElement("div");
+  time.innerText = experience.time;
+  const title = document.createElement("div");
+  title.innerText = experience.title;
+  const company = document.createElement("div");
+  company.innerText = experience.company;
+  container.append(time, title, company);
+  experienceContainer.append(image, container);
+  experiencesContainer.append(experienceContainer);
+});
+
 educations.forEach((education) => {
   const educationDiv = document.createElement("div");
   educationDiv.classList.add("education");
@@ -186,20 +207,6 @@ educations.forEach((education) => {
   universityDiv.innerHTML = education.college;
   educationDiv.append(yearDiv, nameDiv, universityDiv);
   educationsContainer.append(educationDiv);
-});
-
-experiences.forEach((experience) => {
-  const experienceDiv = document.createElement("div");
-  experienceDiv.classList.add("experience");
-  const yearDiv = document.createElement("div");
-  yearDiv.innerHTML = "<strong>" + experience.year + "</strong>";
-  const nameDiv = document.createElement("div");
-  nameDiv.innerHTML = "<strong>" + experience.name + "</strong>";
-  const atDiv = document.createElement("div");
-  atDiv.classList.add("gray");
-  atDiv.innerHTML = experience.at;
-  experienceDiv.append(yearDiv, nameDiv, atDiv);
-  experiencesContainer.append(experienceDiv);
 });
 
 skills.forEach((skill) => {
