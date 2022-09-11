@@ -19,6 +19,8 @@ const experiences = [
     company: "Kellton Tech Solutions Limited",
   },
 ];
+const skillsContainer = document.querySelector(".skills");
+
 const educations = [
   {
     year: "2019 - 2022",
@@ -29,31 +31,80 @@ const educations = [
 
 const skills = [
   {
+    id: "html",
     name: "HTML",
-    img: "images/html.png",
-    percentage: "75%",
+    percentage: 90,
   },
   {
+    id: "css",
     name: "CSS",
-    img: "images/css.png",
-    percentage: "75%",
+    percentage: 90,
   },
   {
+    id: "javacript",
     name: "JavaScript",
-    img: "images/javascript.png",
-    percentage: "50%",
+    percentage: 80,
   },
   {
+    id: "reactjs",
     name: "React.js",
-    img: "images/react.png",
-    percentage: "50%",
+    percentage: 80,
   },
   {
-    name: "Bootstrap",
-    img: "images/bootstrap.png",
-    percentage: "75%",
+    id: "nodejs",
+    name: "Node.js",
+    percentage: 70,
+  },
+  {
+    id: "expressjs",
+    name: "Express.js",
+    percentage: 70,
+  },
+  {
+    id: "mongodb",
+    name: "MongoDB",
+    percentage: 60,
   },
 ];
+
+skills.forEach((skill) => {
+  const skillContainer = document.createElement("div");
+  skillContainer.classList.add("skill");
+  const skillName = document.createElement("div");
+  skillName.classList.add("skill-name");
+  skillName.innerText = skill.name;
+  const progress = document.createElement("div");
+  progress.id = skill.id;
+  progress.classList.add("progress");
+  skillContainer.append(skillName, progress);
+  skillsContainer.append(skillContainer);
+  var circle = new ProgressBar.Circle("#" + progress.id, {
+    color: "#777",
+    strokeWidth: 4,
+    trailWidth: 1,
+    easing: "easeInOut",
+    duration: 2000,
+    text: {
+      autoStyleContainer: false,
+    },
+    from: { color: "#777", width: 1 },
+    to: { color: "#238ca9", width: 4 },
+    step: function (state, circle) {
+      circle.path.setAttribute("stroke", state.color);
+      circle.path.setAttribute("stroke-width", state.width);
+
+      var value = Math.round(circle.value() * 100);
+      if (value === 0) {
+        circle.setText("");
+      } else {
+        circle.setText(value + "%");
+      }
+    },
+  });
+  const value = skill.percentage / 100;
+  circle.animate(value);
+});
+
 const badges = [
   {
     name: "CSS",
@@ -153,7 +204,6 @@ const emailAddressPlace = document.querySelectorAll(".email-address");
 const phoneNumberPlace = document.querySelectorAll(".phone-number");
 const educationsContainer = document.querySelector(".educations");
 const experiencesContainer = document.querySelector(".experiences");
-const skillsContainer = document.querySelector(".skills");
 const badgesContainer = document.querySelector(".badges");
 const achievementsContainer = document.querySelector(".achievements");
 const projectsContainer = document.querySelector(".projects-grid");
@@ -209,30 +259,30 @@ educations.forEach((education) => {
   educationsContainer.append(educationDiv);
 });
 
-skills.forEach((skill) => {
-  const skillDiv = document.createElement("div");
-  skillDiv.classList.add("skill");
-  const colDiv = document.createElement("div");
-  colDiv.classList.add("col");
-  const nameDiv = document.createElement("div");
-  const strongDiv = document.createElement("strong");
-  strongDiv.innerHTML = skill.name;
-  nameDiv.append(strongDiv);
-  const imageDiv = document.createElement("div");
-  const image = document.createElement("img");
-  image.src = skill.img;
-  image.alt = skill.name;
-  image.classList.add("skill-logo");
-  imageDiv.append(image);
-  colDiv.append(nameDiv);
-  colDiv.append(imageDiv);
-  skillDiv.append(colDiv);
-  const percentageDiv = document.createElement("div");
-  percentageDiv.dataset.percentage = skill.percentage;
-  percentageDiv.classList.add("skill-percentage");
-  skillDiv.append(percentageDiv);
-  skillsContainer.append(skillDiv);
-});
+// skills.forEach((skill) => {
+//   const skillDiv = document.createElement("div");
+//   skillDiv.classList.add("skill");
+//   const colDiv = document.createElement("div");
+//   colDiv.classList.add("col");
+//   const nameDiv = document.createElement("div");
+//   const strongDiv = document.createElement("strong");
+//   strongDiv.innerHTML = skill.name;
+//   nameDiv.append(strongDiv);
+//   const imageDiv = document.createElement("div");
+//   const image = document.createElement("img");
+//   image.src = skill.img;
+//   image.alt = skill.name;
+//   image.classList.add("skill-logo");
+//   imageDiv.append(image);
+//   colDiv.append(nameDiv);
+//   colDiv.append(imageDiv);
+//   skillDiv.append(colDiv);
+//   const percentageDiv = document.createElement("div");
+//   percentageDiv.dataset.percentage = skill.percentage;
+//   percentageDiv.classList.add("skill-percentage");
+//   skillDiv.append(percentageDiv);
+//   skillsContainer.append(skillDiv);
+// });
 
 badges.forEach((badge) => {
   const badgeDiv = document.createElement("div");

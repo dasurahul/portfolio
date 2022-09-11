@@ -348,6 +348,41 @@ img {
   font-weight: 500;
 }
 
+.experience > div > div:nth-child(3) {
+  color: var(--gray-color);
+}
+
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 0.05rem solid var(--light-gray-color);
+  margin-bottom: 2rem;
+}
+
+.skill {
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  transition: all 0.25s linear;
+}
+
+.skill:hover {
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
+}
+
+.skill-name {
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.progress {
+  width: 100px;
+  margin-inline: auto;
+  position: relative;
+}
+
 .education {
   padding-bottom: 1rem;
   border-bottom: 0.05rem solid var(--light-gray-color);
@@ -358,6 +393,7 @@ img {
   margin-bottom: 1rem;
 }
 
+/* 
 .skills {
   padding-bottom: 1rem;
   border-bottom: 0.05rem solid var(--light-gray-color);
@@ -400,7 +436,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
   font-weight: bold;
-}
+} */
 
 .badges {
   padding-bottom: 1rem;
