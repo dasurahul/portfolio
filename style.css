@@ -30,11 +30,16 @@ body {
 h1,
 h2,
 h3,
-h4,
-h5,
-h6,
 p {
   margin: 0;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.25rem;
 }
 
 ul {
@@ -255,27 +260,6 @@ img {
   z-index: -1;
 }
 
-.secondary-heading {
-  display: inline-block;
-  background-image: linear-gradient(
-    to right,
-    var(--primary-dark-color),
-    var(--primary-color)
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  transition: 0.25s;
-}
-
-.secondary-heading:hover {
-  transform: skew(-5deg, -5deg);
-  text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-}
-
-.gray {
-  color: var(--gray-color);
-}
-
 .about {
   width: 80%;
   margin-inline: auto;
@@ -287,30 +271,43 @@ img {
 }
 
 .about img {
-  width: 20rem;
+  max-width: 20rem;
   background-color: var(--primary-light-color);
 }
 
-.about > div h2 {
+.secondary-heading {
+  display: inline-block;
+  background-image: linear-gradient(
+    to right,
+    var(--primary-dark-color),
+    var(--primary-color)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 600;
+  transition: all 0.25s linear;
   margin-bottom: 2rem;
+}
+
+.secondary-heading:hover {
+  transform: skew(-5deg, -5deg);
+  text-shadow: 0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 
 .data {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 1rem;
 }
 
-.data > *:last-child {
-  letter-spacing: 0.05rem;
+.data h3 {
+  font-weight: 500;
 }
 
-.data:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-
-.data > *:first-child {
-  font-weight: bold;
+.data p {
+  font-weight: 300;
 }
 
 .resume {
