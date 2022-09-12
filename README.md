@@ -1,8 +1,8 @@
 # Portfolio
 
-[page](https://dasu-rahul.netlify.app)
-
 ![Portfolio](./images/portfolio.png)
+
+[page](https://dasu-rahul.netlify.app)
 
 ## Built with
 
