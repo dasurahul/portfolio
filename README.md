@@ -1,11 +1,11 @@
 # Portfolio
 
-- [page](https://dasu-rahul.netlify.app)
+[page](https://dasu-rahul.netlify.app)
 
-![Portfolio](./images/portfolio.png)
+![Portfolio](images/portfolio.png)
 
 ## Built with
 
 - HTML
 - CSS
-- JS
+- JavaScript
