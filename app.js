@@ -160,38 +160,6 @@ skills.forEach((skill) => {
   circle.animate(value);
 });
 
-const badges = [
-  {
-    name: "CSS",
-    description: "LinkedIn Skill Assessment Badge",
-  },
-  {
-    name: "React.js",
-    description: "LinkedIn Skill Assessment Badge",
-  },
-  {
-    name: "JavaScript",
-    description: "Silver Badge from HackerRank",
-  },
-];
-const achievements = [
-  {
-    title: "CSS Certificate",
-    description: "Got CSS Certificate from HackerRank",
-  },
-  {
-    title: "React Certificate",
-    description: "Got React Certificate from HackerRank",
-  },
-  {
-    title: "Frontendmentor Projects",
-    description: "Completed 6 projects from frontendmentor.io",
-  },
-  {
-    title: "AWS Certificate",
-    description: "Got AWS Partner: Accreditation (Technical) Certificate",
-  },
-];
 const projects = [
   {
     title: "NFT Preview Card Component",
@@ -315,56 +283,6 @@ educations.forEach((education) => {
   educationsContainer.append(educationContainer);
 });
 
-// skills.forEach((skill) => {
-//   const skillDiv = document.createElement("div");
-//   skillDiv.classList.add("skill");
-//   const colDiv = document.createElement("div");
-//   colDiv.classList.add("col");
-//   const nameDiv = document.createElement("div");
-//   const strongDiv = document.createElement("strong");
-//   strongDiv.innerHTML = skill.name;
-//   nameDiv.append(strongDiv);
-//   const imageDiv = document.createElement("div");
-//   const image = document.createElement("img");
-//   image.src = skill.img;
-//   image.alt = skill.name;
-//   image.classList.add("skill-logo");
-//   imageDiv.append(image);
-//   colDiv.append(nameDiv);
-//   colDiv.append(imageDiv);
-//   skillDiv.append(colDiv);
-//   const percentageDiv = document.createElement("div");
-//   percentageDiv.dataset.percentage = skill.percentage;
-//   percentageDiv.classList.add("skill-percentage");
-//   skillDiv.append(percentageDiv);
-//   skillsContainer.append(skillDiv);
-// });
-
-badges.forEach((badge) => {
-  const badgeDiv = document.createElement("div");
-  const nameDiv = document.createElement("strong");
-  nameDiv.innerHTML = badge.name;
-  const descriptionDiv = document.createElement("span");
-  descriptionDiv.classList.add("gray");
-  descriptionDiv.classList.add("small");
-  descriptionDiv.innerHTML = " - " + badge.description;
-  badgeDiv.append(nameDiv, descriptionDiv);
-  badgesContainer.append(badgeDiv);
-});
-
-achievements.forEach((achievement) => {
-  const achievementDiv = document.createElement("div");
-  achievementDiv.classList.add("achievement");
-  const titleDiv = document.createElement("div");
-  titleDiv.innerHTML = "<strong>" + achievement.title + "</strong>";
-  const descriptionDiv = document.createElement("div");
-  descriptionDiv.classList.add("gray");
-  descriptionDiv.classList.add("small");
-  descriptionDiv.innerHTML = achievement.description;
-  achievementDiv.append(titleDiv, descriptionDiv);
-  achievementsContainer.append(achievementDiv);
-});
-
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 
@@ -389,4 +307,50 @@ projects.forEach((project) => {
   image.alt = project.title;
   projectContainer.append(image);
   projectsContainer.append(projectContainer);
+});
+
+const certifications = [
+  {
+    image: "images/aws.svg",
+    name: "AWS Partner: Accreditation (Technical)",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/8845c98b-b482-4197-986e-b0ccefb211fb?source=linked_in_profile",
+  },
+  {
+    image: "images/hackerrank.svg",
+    name: "React (Basic) Certificate",
+    organization: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/07cc06c37c11",
+  },
+  {
+    image: "images/hackerrank.svg",
+    name: "CSS Certificate",
+    organization: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/13f1053481f2",
+  },
+];
+
+const certificationsContainer = document.querySelector(".certifications");
+
+certifications.forEach((certification) => {
+  const certificationContainer = document.createElement("div");
+  certificationContainer.classList.add("certification");
+  const image = document.createElement("img");
+  image.src = certification.image;
+  image.alt = certification.name;
+  const container = document.createElement("div");
+  const name = document.createElement("div");
+  name.innerText = certification.name;
+  const organization = document.createElement("div");
+  organization.innerText = certification.organization;
+  const link = document.createElement("a");
+  link.href = certification.url;
+  link.target = "_blank";
+  const viewImage = document.createElement("img");
+  viewImage.src = "images/arrow-up-right-from-square.svg";
+  viewImage.alt = "icon";
+  link.append("View", viewImage);
+  container.append(name, organization, link);
+  certificationContainer.append(image, container);
+  certificationsContainer.append(certificationContainer);
 });
