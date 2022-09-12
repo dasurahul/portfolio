@@ -142,10 +142,13 @@ const projects = [
     src: "images/yelpcamp.png",
   },
 ];
-const address = "Bhanjanagar, Odisha";
-const emailAddress = "dasurahul598@gmail.com";
+const quotation = "Code is like humor. When you have to explain it, it’s bad.";
+const address = "Gurugram, Haryana, India";
 const phoneNumber = "+91 9337 086 565";
-
+const emailAddress = "dasurahul598@gmail.com";
+document.querySelector(".logo div").innerText = name;
+document.querySelector(".me > img").src = "images/profile-picture.png";
+document.querySelector(".me > img").alt = fullName;
 document.querySelector(".me h3").innerText = fullName;
 document.querySelector(".me p").innerText = designation;
 const descriptionContainer = document.querySelector(".description");
@@ -154,37 +157,38 @@ descriptions.forEach((description) => {
   paragraph.innerText = description;
   descriptionContainer.append(paragraph);
 });
-
+const socialLinksContainer = document.querySelectorAll(".social-links");
+socialLinksContainer.forEach((container) => {
+  socialLinks.forEach((socialLink) => {
+    const link = document.createElement("a");
+    link.href = socialLink.href;
+    link.target = "_blank";
+    const image = document.createElement("img");
+    image.src = socialLink.image;
+    image.alt = socialLink.name;
+    link.append(image);
+    container.append(link);
+  });
+});
+const experiencesContainer = document.querySelector(".experiences");
+experiences.forEach((experience) => {
+  const experienceContainer = document.createElement("div");
+  experienceContainer.classList.add("experience");
+  const image = document.createElement("img");
+  image.src = experience.image;
+  image.alt = experience.company;
+  const container = document.createElement("div");
+  const time = document.createElement("div");
+  time.innerText = experience.time;
+  const title = document.createElement("div");
+  title.innerText = experience.title;
+  const company = document.createElement("div");
+  company.innerText = experience.company;
+  container.append(time, title, company);
+  experienceContainer.append(image, container);
+  experiencesContainer.append(experienceContainer);
+});
 const skillsContainer = document.querySelector(".skills");
-
-const socialLinksContainer = document.querySelector(".social-links");
-const links = document.querySelector(".links");
-
-socialLinks.forEach((link) => {
-  const linkContainer = document.createElement("a");
-  linkContainer.href = link.href;
-  linkContainer.target = "_blank";
-  const image = document.createElement("img");
-  image.src = link.image;
-  image.alt = link.name;
-  linkContainer.append(image);
-  socialLinksContainer.append(linkContainer);
-});
-
-socialLinks.forEach((link) => {
-  const linkContainer = document.createElement("a");
-  linkContainer.href = link.href;
-  linkContainer.target = "_blank";
-  const image = document.createElement("img");
-  image.src = link.image;
-  image.alt = link.name;
-  linkContainer.append(image);
-  links.append(linkContainer);
-});
-
-document.querySelector(".profile-picture").src = "images/profile-picture.png";
-document.querySelector(".profile-picture").alt = fullName;
-
 skills.forEach((skill) => {
   const skillContainer = document.createElement("div");
   skillContainer.classList.add("skill");
@@ -210,7 +214,6 @@ skills.forEach((skill) => {
     step: function (state, circle) {
       circle.path.setAttribute("stroke", state.color);
       circle.path.setAttribute("stroke-width", state.width);
-
       var value = Math.round(circle.value() * 100);
       if (value === 0) {
         circle.setText("");
@@ -222,105 +225,7 @@ skills.forEach((skill) => {
   const value = skill.percentage / 100;
   circle.animate(value);
 });
-
-const linkedInProfileUrl = "https://www.linkedin.com/in/dasu-rahul";
-const githubProfileUrl = "https://www.github.com/dasurahul";
-const quotation = "Code is like humor. When you have to explain it, it’s bad.";
-
-document.querySelector(".logo div").innerText = name;
-const fullNamePlace = document.querySelectorAll(".full-name");
-const addressPlace = document.querySelectorAll(".address");
-const emailAddressPlace = document.querySelectorAll(".email-address");
-const phoneNumberPlace = document.querySelectorAll(".phone-number");
-const educationsContainer = document.querySelector(".educations");
-const experiencesContainer = document.querySelector(".experiences");
-const badgesContainer = document.querySelector(".badges");
-const achievementsContainer = document.querySelector(".achievements");
-const projectsContainer = document.querySelector(".projects-grid");
-// document.querySelector(".linkedin").href = linkedInProfileUrl;
-// document.querySelector(".github").href = githubProfileUrl;
-document.querySelector(".quotation p").innerHTML = quotation;
-
-fullNamePlace.forEach((eachPlace) => {
-  eachPlace.innerHTML = fullName;
-});
-
-addressPlace.forEach((eachPlace) => {
-  eachPlace.innerHTML = address;
-});
-
-emailAddressPlace.forEach((eachPlace) => {
-  eachPlace.innerHTML = emailAddress;
-});
-
-phoneNumberPlace.forEach((eachPlace) => {
-  eachPlace.innerHTML = phoneNumber;
-});
-
-experiences.forEach((experience) => {
-  const experienceContainer = document.createElement("div");
-  experienceContainer.classList.add("experience");
-  const image = document.createElement("img");
-  image.src = experience.image;
-  image.alt = experience.company;
-  const container = document.createElement("div");
-  const time = document.createElement("div");
-  time.innerText = experience.time;
-  const title = document.createElement("div");
-  title.innerText = experience.title;
-  const company = document.createElement("div");
-  company.innerText = experience.company;
-  container.append(time, title, company);
-  experienceContainer.append(image, container);
-  experiencesContainer.append(experienceContainer);
-});
-
-educations.forEach((education) => {
-  const educationContainer = document.createElement("div");
-  educationContainer.classList.add("education");
-  const image = document.createElement("img");
-  image.src = education.image;
-  image.alt = education.college;
-  const container = document.createElement("div");
-  const yearContainer = document.createElement("div");
-  yearContainer.innerText = education.year;
-  const nameContainer = document.createElement("div");
-  nameContainer.innerText = education.name;
-  const collegeContainer = document.createElement("div");
-  collegeContainer.innerText = education.college;
-  container.append(yearContainer, nameContainer, collegeContainer);
-  educationContainer.append(image, container);
-  educationsContainer.append(educationContainer);
-});
-
-const menuButton = document.querySelector(".menu-button");
-const menu = document.querySelector(".menu");
-
-menuButton.addEventListener("click", () => {
-  menu.classList.remove("closed");
-  menu.classList.add("opened");
-});
-
-const closeButton = document.querySelector(".menu-close-button");
-closeButton.addEventListener("click", () => {
-  menu.classList.add("closed");
-  menu.classList.remove("opened");
-});
-
-projects.forEach((project) => {
-  const projectContainer = document.createElement("a");
-  projectContainer.href = project.href;
-  projectContainer.target = "_blank";
-  projectContainer.dataset.projectname = project.title;
-  const image = document.createElement("img");
-  image.src = project.src;
-  image.alt = project.title;
-  projectContainer.append(image);
-  projectsContainer.append(projectContainer);
-});
-
 const certificationsContainer = document.querySelector(".certifications");
-
 certifications.forEach((certification) => {
   const certificationContainer = document.createElement("div");
   certificationContainer.classList.add("certification");
@@ -342,4 +247,53 @@ certifications.forEach((certification) => {
   container.append(name, organization, link);
   certificationContainer.append(image, container);
   certificationsContainer.append(certificationContainer);
+});
+const educationsContainer = document.querySelector(".educations");
+educations.forEach((education) => {
+  const educationContainer = document.createElement("div");
+  educationContainer.classList.add("education");
+  const image = document.createElement("img");
+  image.src = education.image;
+  image.alt = education.college;
+  const container = document.createElement("div");
+  const yearContainer = document.createElement("div");
+  yearContainer.innerText = education.year;
+  const nameContainer = document.createElement("div");
+  nameContainer.innerText = education.name;
+  const collegeContainer = document.createElement("div");
+  collegeContainer.innerText = education.college;
+  container.append(yearContainer, nameContainer, collegeContainer);
+  educationContainer.append(image, container);
+  educationsContainer.append(educationContainer);
+});
+const projectsContainer = document.querySelector(".projects-grid");
+projects.forEach((project) => {
+  const projectContainer = document.createElement("a");
+  projectContainer.href = project.href;
+  projectContainer.target = "_blank";
+  projectContainer.dataset.projectname = project.title;
+  const image = document.createElement("img");
+  image.src = project.src;
+  image.alt = project.title;
+  projectContainer.append(image);
+  projectsContainer.append(projectContainer);
+});
+document.querySelector(".social-profiles > img").src =
+  "images/profile-picture.png";
+document.querySelector(".social-profiles > img").alt = fullName;
+document.querySelector(".social-profiles > p").innerText = fullName;
+document.querySelector(".quotation p").innerText = quotation;
+document.querySelector(".address").innerText = address;
+document.querySelector(".email-address").innerText = emailAddress;
+document.querySelector(".phone-number").innerText = phoneNumber;
+const menuButton = document.querySelector(".menu-button");
+const menu = document.querySelector(".menu");
+menuButton.addEventListener("click", () => {
+  menu.classList.remove("closed");
+  menu.classList.add("opened");
+});
+const closeButton = document.querySelector(".menu-close-button");
+closeButton.addEventListener("click", () => {
+  menu.classList.add("closed");
+  menu.classList.remove("opened");
 });

@@ -543,7 +543,7 @@ img {
   margin-bottom: 2rem;
 }
 
-.profile-picture {
+.social-profiles > img {
   width: 3rem;
   height: 3rem;
   object-fit: cover;
