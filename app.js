@@ -55,13 +55,13 @@ const skillsContainer = document.querySelector(".skills");
 
 const educations = [
   {
-    image: "images/building-columns-solid.svg",
+    image: "images/college.svg",
     year: "2019 - 2022",
     name: "BCA",
     college: "Bhanja College of Computer and Management",
   },
   {
-    image: "images/building-columns-solid.svg",
+    image: "images/college.svg",
     year: "2017 - 2019",
     name: "10+2",
     college: "Kabi Samrat Upendra Bhanja College",
