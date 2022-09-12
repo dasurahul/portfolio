@@ -526,7 +526,7 @@ img {
 }
 
 .footer {
-  background-color: #000000;
+  background-color: #000;
   color: var(--light-gray-color);
 }
 
@@ -539,6 +539,7 @@ img {
 }
 
 .social-profiles h3 {
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
@@ -552,24 +553,32 @@ img {
 }
 
 .social-profiles p {
+  font-weight: 400;
   margin-bottom: 1rem;
 }
 
 .social-profiles > div {
   display: flex;
+  align-items: center;
   gap: 1rem;
 }
 
-.social-icon {
-  width: 1.5rem;
-  filter: grayscale(1) invert(1);
+.social-profiles > div img {
+  width: 2rem;
+  filter: invert(100%);
 }
 
 .quotation h3 {
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
+.quotation p {
+  font-weight: 300;
+}
+
 .contact h3 {
+  font-weight: 500;
   margin-bottom: 2rem;
 }
 
@@ -584,7 +593,7 @@ img {
 
 .contact img {
   width: 1.5rem;
-  filter: grayscale(1) invert(1);
+  filter: invert(100%);
 }
 
 @media (max-width: 55rem) {

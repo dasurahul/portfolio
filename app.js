@@ -69,6 +69,7 @@ const educations = [
 ];
 
 const socialLinksContainer = document.querySelector(".social-links");
+const links = document.querySelector(".links");
 
 socialLinks.forEach((link) => {
   const linkContainer = document.createElement("a");
@@ -79,6 +80,7 @@ socialLinks.forEach((link) => {
   image.alt = link.name;
   linkContainer.append(image);
   socialLinksContainer.append(linkContainer);
+  links.append(linkContainer);
 });
 
 document.querySelector(".profile-picture").src = "images/profile-picture.png";
@@ -184,8 +186,7 @@ const projects = [
 ];
 const linkedInProfileUrl = "https://www.linkedin.com/in/dasu-rahul";
 const githubProfileUrl = "https://www.github.com/dasurahul";
-const quotation =
-  "I believe that whatever doesn't kill you, simply makes you stranger.";
+const quotation = "Code is like humor. When you have to explain it, it’s bad.";
 
 document.querySelector(".logo div").innerText = name;
 const fullNamePlace = document.querySelectorAll(".full-name");
@@ -197,8 +198,8 @@ const experiencesContainer = document.querySelector(".experiences");
 const badgesContainer = document.querySelector(".badges");
 const achievementsContainer = document.querySelector(".achievements");
 const projectsContainer = document.querySelector(".projects-grid");
-document.querySelector(".linkedin").href = linkedInProfileUrl;
-document.querySelector(".github").href = githubProfileUrl;
+// document.querySelector(".linkedin").href = linkedInProfileUrl;
+// document.querySelector(".github").href = githubProfileUrl;
 document.querySelector(".quotation p").innerHTML = quotation;
 
 fullNamePlace.forEach((eachPlace) => {
