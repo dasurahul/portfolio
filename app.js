@@ -4,7 +4,7 @@ const designation = "Software Engineer";
 const descriptions = [
   "I’m living the dream.",
   "I’ve always been a great problem solver, an independent introvert, and a technophile obsessed with the latest devices. Today, I’m working from home as a software engineer for Kellton, and I get to show off all these elements of who I am.",
-  "I’m always adding new skills to my repertoire. I’m also eager to meet other software engineers.",
+  "I’m always adding new skills to my repertoire. I’m also eager to meet other software engineers in the area, so feel free to connect!",
 ];
 const address = "Bhanjanagar, Odisha";
 const emailAddress = "dasurahul598@gmail.com";
@@ -64,7 +64,7 @@ const educations = [
     image: "images/building-columns-solid.svg",
     year: "2017 - 2019",
     name: "10+2",
-    college: "KSUB College",
+    college: "Kabi Samrat Upendra Bhanja College",
   },
 ];
 
@@ -73,6 +73,7 @@ const socialLinksContainer = document.querySelector(".social-links");
 socialLinks.forEach((link) => {
   const linkContainer = document.createElement("a");
   linkContainer.href = link.href;
+  linkContainer.target = "_blank";
   const image = document.createElement("img");
   image.src = link.image;
   image.alt = link.name;
