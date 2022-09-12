@@ -1,6 +1,6 @@
 # Portfolio
 
-![Portfolio](images/portfolio.png)
+![Portfolio](/images/portfolio.png)
 
 [page](https://dasu-rahul.netlify.app)
 
