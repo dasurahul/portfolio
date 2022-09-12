@@ -6,24 +6,6 @@ const descriptions = [
   "I’ve always been a great problem solver, an independent introvert, and a technophile obsessed with the latest devices. Today, I’m working from home as a software engineer for Kellton, and I get to show off all these elements of who I am.",
   "I’m always adding new skills to my repertoire. I’m also eager to meet other software engineers in the area, so feel free to connect!",
 ];
-const address = "Bhanjanagar, Odisha";
-const emailAddress = "dasurahul598@gmail.com";
-const phoneNumber = "+91 9337 086 565";
-const experiences = [
-  {
-    image: "images/kellton.png",
-    time: "2022 August - Present",
-    title: "Software Engineer",
-    company: "Kellton Tech Solutions Limited",
-  },
-  {
-    image: "images/kellton.png",
-    time: "2022 February - 2022 August",
-    title: "Trainee - Software Development",
-    company: "Kellton Tech Solutions Limited",
-  },
-];
-
 const socialLinks = [
   {
     name: "linkedin",
@@ -41,61 +23,20 @@ const socialLinks = [
     href: "https://www.hackerrank.com/rock97456",
   },
 ];
-
-document.querySelector(".me h3").innerText = fullName;
-document.querySelector(".me p").innerText = designation;
-const descriptionContainer = document.querySelector(".description");
-descriptions.forEach((description) => {
-  const paragraph = document.createElement("p");
-  paragraph.innerText = description;
-  descriptionContainer.append(paragraph);
-});
-
-const skillsContainer = document.querySelector(".skills");
-
-const educations = [
+const experiences = [
   {
-    image: "images/college.svg",
-    year: "2019 - 2022",
-    name: "BCA",
-    college: "Bhanja College of Computer and Management",
+    image: "images/kellton.png",
+    time: "2022 August - Present",
+    title: "Software Engineer",
+    company: "Kellton Tech Solutions Limited",
   },
   {
-    image: "images/college.svg",
-    year: "2017 - 2019",
-    name: "10+2",
-    college: "Kabi Samrat Upendra Bhanja College",
+    image: "images/kellton.png",
+    time: "2022 February - 2022 August",
+    title: "Trainee - Software Development",
+    company: "Kellton Tech Solutions Limited",
   },
 ];
-
-const socialLinksContainer = document.querySelector(".social-links");
-const links = document.querySelector(".links");
-
-socialLinks.forEach((link) => {
-  const linkContainer = document.createElement("a");
-  linkContainer.href = link.href;
-  linkContainer.target = "_blank";
-  const image = document.createElement("img");
-  image.src = link.image;
-  image.alt = link.name;
-  linkContainer.append(image);
-  socialLinksContainer.append(linkContainer);
-});
-
-socialLinks.forEach((link) => {
-  const linkContainer = document.createElement("a");
-  linkContainer.href = link.href;
-  linkContainer.target = "_blank";
-  const image = document.createElement("img");
-  image.src = link.image;
-  image.alt = link.name;
-  linkContainer.append(image);
-  links.append(linkContainer);
-});
-
-document.querySelector(".profile-picture").src = "images/profile-picture.png";
-document.querySelector(".profile-picture").alt = fullName;
-
 const skills = [
   {
     id: "html",
@@ -133,6 +74,116 @@ const skills = [
     percentage: 60,
   },
 ];
+const certifications = [
+  {
+    image: "images/aws.svg",
+    name: "AWS Partner: Accreditation (Technical)",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/8845c98b-b482-4197-986e-b0ccefb211fb?source=linked_in_profile",
+  },
+  {
+    image: "images/aws.svg",
+    name: "AWS Partner: Cloud Economics Accreditation",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/af330a78-18d9-4bf0-99d2-8caffd656bc7/linked_in_profile",
+  },
+  {
+    image: "images/aws.svg",
+    name: "AWS Partner: Accreditation (Business)",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/507f78ae-8122-4f9a-87d5-b1cdd43ae376/linked_in_profile",
+  },
+  {
+    image: "images/hackerrank.svg",
+    name: "React (Basic) Certificate",
+    organization: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/07cc06c37c11",
+  },
+  {
+    image: "images/hackerrank.svg",
+    name: "CSS Certificate",
+    organization: "HackerRank",
+    url: "https://www.hackerrank.com/certificates/13f1053481f2",
+  },
+];
+const educations = [
+  {
+    image: "images/college.svg",
+    year: "2019 - 2022",
+    name: "BCA",
+    college: "Bhanja College of Computer and Management",
+  },
+  {
+    image: "images/college.svg",
+    year: "2017 - 2019",
+    name: "10+2",
+    college: "Kabi Samrat Upendra Bhanja College",
+  },
+];
+const projects = [
+  {
+    title: "Photos App",
+    href: "https://rahul-photos-app.netlify.app",
+    src: "images/photos-app.png",
+  },
+  {
+    title: "Sunnyside Agency Landing Page",
+    href: "https://sunnyside-agency-rahul.netlify.app",
+    src: "images/sunnyside-agency-landing-page.png",
+  },
+  {
+    title: "Loopstudios Landing Page",
+    href: "https://loop-studios-landing-page-by-rahul.netlify.app",
+    src: "images/loopstudios-landing-page.png",
+  },
+  {
+    title: "YelpCamp",
+    href: "https://yelpcamp-rahul.netlify.app",
+    src: "images/yelpcamp.png",
+  },
+];
+const address = "Bhanjanagar, Odisha";
+const emailAddress = "dasurahul598@gmail.com";
+const phoneNumber = "+91 9337 086 565";
+
+document.querySelector(".me h3").innerText = fullName;
+document.querySelector(".me p").innerText = designation;
+const descriptionContainer = document.querySelector(".description");
+descriptions.forEach((description) => {
+  const paragraph = document.createElement("p");
+  paragraph.innerText = description;
+  descriptionContainer.append(paragraph);
+});
+
+const skillsContainer = document.querySelector(".skills");
+
+const socialLinksContainer = document.querySelector(".social-links");
+const links = document.querySelector(".links");
+
+socialLinks.forEach((link) => {
+  const linkContainer = document.createElement("a");
+  linkContainer.href = link.href;
+  linkContainer.target = "_blank";
+  const image = document.createElement("img");
+  image.src = link.image;
+  image.alt = link.name;
+  linkContainer.append(image);
+  socialLinksContainer.append(linkContainer);
+});
+
+socialLinks.forEach((link) => {
+  const linkContainer = document.createElement("a");
+  linkContainer.href = link.href;
+  linkContainer.target = "_blank";
+  const image = document.createElement("img");
+  image.src = link.image;
+  image.alt = link.name;
+  linkContainer.append(image);
+  links.append(linkContainer);
+});
+
+document.querySelector(".profile-picture").src = "images/profile-picture.png";
+document.querySelector(".profile-picture").alt = fullName;
 
 skills.forEach((skill) => {
   const skillContainer = document.createElement("div");
@@ -172,28 +223,6 @@ skills.forEach((skill) => {
   circle.animate(value);
 });
 
-const projects = [
-  {
-    title: "Photos App",
-    href: "https://rahul-photos-app.netlify.app",
-    src: "images/photos-app.png",
-  },
-  {
-    title: "Sunnyside Agency Landing Page",
-    href: "https://sunnyside-agency-rahul.netlify.app",
-    src: "images/sunnyside-agency-landing-page.png",
-  },
-  {
-    title: "Loopstudios Landing Page",
-    href: "https://loop-studios-landing-page-by-rahul.netlify.app",
-    src: "images/loopstudios-landing-page.png",
-  },
-  {
-    title: "YelpCamp",
-    href: "https://yelpcamp-rahul.netlify.app",
-    src: "images/yelpcamp.PNG",
-  },
-];
 const linkedInProfileUrl = "https://www.linkedin.com/in/dasu-rahul";
 const githubProfileUrl = "https://www.github.com/dasurahul";
 const quotation = "Code is like humor. When you have to explain it, it’s bad.";
@@ -289,39 +318,6 @@ projects.forEach((project) => {
   projectContainer.append(image);
   projectsContainer.append(projectContainer);
 });
-
-const certifications = [
-  {
-    image: "images/aws.svg",
-    name: "AWS Partner: Accreditation (Technical)",
-    organization: "Amazon Web Services (AWS)",
-    url: "https://www.credly.com/badges/8845c98b-b482-4197-986e-b0ccefb211fb?source=linked_in_profile",
-  },
-  {
-    image: "images/aws.svg",
-    name: "AWS Partner: Cloud Economics Accreditation",
-    organization: "Amazon Web Services (AWS)",
-    url: "https://www.credly.com/badges/af330a78-18d9-4bf0-99d2-8caffd656bc7/linked_in_profile",
-  },
-  {
-    image: "images/aws.svg",
-    name: "AWS Partner: Accreditation (Business)",
-    organization: "Amazon Web Services (AWS)",
-    url: "https://www.credly.com/badges/507f78ae-8122-4f9a-87d5-b1cdd43ae376/linked_in_profile",
-  },
-  {
-    image: "images/hackerrank.svg",
-    name: "React (Basic) Certificate",
-    organization: "HackerRank",
-    url: "https://www.hackerrank.com/certificates/07cc06c37c11",
-  },
-  {
-    image: "images/hackerrank.svg",
-    name: "CSS Certificate",
-    organization: "HackerRank",
-    url: "https://www.hackerrank.com/certificates/13f1053481f2",
-  },
-];
 
 const certificationsContainer = document.querySelector(".certifications");
 
