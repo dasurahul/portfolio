@@ -287,6 +287,18 @@ const certifications = [
     url: "https://www.credly.com/badges/8845c98b-b482-4197-986e-b0ccefb211fb?source=linked_in_profile",
   },
   {
+    image: "images/aws.svg",
+    name: "AWS Partner: Cloud Economics Accreditation",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/af330a78-18d9-4bf0-99d2-8caffd656bc7/linked_in_profile",
+  },
+  {
+    image: "images/aws.svg",
+    name: "AWS Partner: Accreditation (Business)",
+    organization: "Amazon Web Services (AWS)",
+    url: "https://www.credly.com/badges/507f78ae-8122-4f9a-87d5-b1cdd43ae376/linked_in_profile",
+  },
+  {
     image: "images/hackerrank.svg",
     name: "React (Basic) Certificate",
     organization: "HackerRank",
