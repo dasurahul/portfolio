@@ -80,6 +80,16 @@ socialLinks.forEach((link) => {
   image.alt = link.name;
   linkContainer.append(image);
   socialLinksContainer.append(linkContainer);
+});
+
+socialLinks.forEach((link) => {
+  const linkContainer = document.createElement("a");
+  linkContainer.href = link.href;
+  linkContainer.target = "_blank";
+  const image = document.createElement("img");
+  image.src = link.image;
+  image.alt = link.name;
+  linkContainer.append(image);
   links.append(linkContainer);
 });
 
