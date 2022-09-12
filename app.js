@@ -32,7 +32,7 @@ const socialLinks = [
   },
   {
     name: "github",
-    image: "images/square-github.svg",
+    image: "images/github.svg",
     href: "https://github.com/dasurahul",
   },
   {
@@ -162,14 +162,9 @@ skills.forEach((skill) => {
 
 const projects = [
   {
-    title: "NFT Preview Card Component",
-    href: "https://zen-feynman-768415.netlify.app",
-    src: "images/nft-preview-card-component.png",
-  },
-  {
-    title: "Advice Generator App",
-    href: "https://advice-generator-by-rahul.netlify.app",
-    src: "images/advice-generator-app.png",
+    title: "Photos App",
+    href: "https://rahul-photos-app.netlify.app",
+    src: "images/photos-app.png",
   },
   {
     title: "Sunnyside Agency Landing Page",
@@ -177,39 +172,14 @@ const projects = [
     src: "images/sunnyside-agency-landing-page.png",
   },
   {
-    title: "Huddle Landing Page",
-    href: "https://huddle-landing-page-with-alternating-feature-blocks-by-rahul.netlify.app",
-    src: "images/huddle-landing-page.png",
-  },
-  {
-    title: "Photos App",
-    href: "https://rahul-photos-app.netlify.app",
-    src: "images/photos-app.png",
-  },
-  {
-    title: "YelpCamp",
-    href: "https://yelpcamp-rahul.netlify.app",
-    src: "images/yelpcamp.PNG",
-  },
-  {
-    title: "AIRY Hotels",
-    href: "https://airy-hotels.netlify.app",
-    src: "images/airy-hotels.png",
-  },
-  {
     title: "Loopstudios Landing Page",
     href: "https://loop-studios-landing-page-by-rahul.netlify.app",
     src: "images/loopstudios-landing-page.png",
   },
   {
-    title: "Sneakers Page",
-    href: "https://sneakers-company.netlify.app",
-    src: "images/sneakers.png",
-  },
-  {
-    title: "Intro component with signup form",
-    href: "https://signup-form-rahul.netlify.app",
-    src: "images/signup-form.PNG",
+    title: "YelpCamp",
+    href: "https://yelpcamp-rahul.netlify.app",
+    src: "images/yelpcamp.PNG",
   },
 ];
 const linkedInProfileUrl = "https://www.linkedin.com/in/dasu-rahul";
