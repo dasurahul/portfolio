@@ -585,6 +585,7 @@ img {
 .contact > div {
   display: flex;
   gap: 1rem;
+  font-weight: 300;
 }
 
 .contact > div:not(:last-child) {
@@ -596,7 +597,7 @@ img {
   filter: invert(100%);
 }
 
-@media (max-width: 55rem) {
+@media (max-width: 50rem) {
   .navbar {
     width: 90%;
   }
@@ -608,13 +609,6 @@ img {
   }
   .about {
     width: 90%;
-  }
-  .about img {
-    display: none;
-  }
-  .data {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
   }
   .resume {
     width: 90%;
