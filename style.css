@@ -534,8 +534,8 @@ img {
   width: 80%;
   margin-inline: auto;
   padding-block: 2rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   gap: 2rem;
 }
 
@@ -619,8 +619,6 @@ img {
   }
   .footer-content {
     width: 90%;
-    flex-direction: column;
-    gap: 3rem;
   }
 }
 
