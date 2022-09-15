@@ -143,7 +143,7 @@ const projects = [
   },
 ];
 const quotation = "Code is like humor. When you have to explain it, it’s bad.";
-const address = "Gurugram, Haryana, India";
+const address = "Odisha, India";
 const phoneNumber = "+91 9337 086 565";
 const emailAddress = "dasurahul598@gmail.com";
 document.querySelector(".logo div").innerText = name;
