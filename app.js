@@ -1,4 +1,3 @@
-const name = "Rahul";
 const fullName = "Dasu Rahul";
 const designation = "Software Engineer";
 const descriptions = [
@@ -146,7 +145,6 @@ const quotation = "Code is like humor. When you have to explain it, it’s bad."
 const address = "Odisha, India";
 const phoneNumber = "+91 9337 086 565";
 const emailAddress = "dasurahul598@gmail.com";
-document.querySelector(".logo div").innerText = name;
 document.querySelector(".me > img").src = "images/profile-picture.png";
 document.querySelector(".me > img").alt = fullName;
 document.querySelector(".me h3").innerText = fullName;
