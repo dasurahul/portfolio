@@ -4,7 +4,6 @@
   --primary-color: #238ca9;
   --primary-dark-color: #0d3745;
   --primary-light-color: #e9f4f6;
-  --primary-very-light-color: #f8fbfc;
   --black-color: #333;
   --white-color: #fff;
   --gray-color: #777;
@@ -244,12 +243,6 @@ img {
 .about {
   width: 80%;
   margin-inline: auto;
-  display: flex;
-  flex-direction: column;
-}
-
-.about h2 {
-  align-self: flex-start;
 }
 
 .secondary-heading {
@@ -278,8 +271,8 @@ img {
 }
 
 .me > img {
-  width: 5rem;
-  height: 5rem;
+  width: 15rem;
+  height: 15rem;
   border-radius: 50%;
   margin-bottom: 2rem;
 }
@@ -300,12 +293,12 @@ img {
 
 .description > p {
   color: var(--gray-color);
+  font-weight: 400;
   line-height: 1.8;
   margin-bottom: 1rem;
 }
 
 .social-links {
-  width: 100%;
   display: flex;
   align-items: center;
   gap: 2rem;
@@ -537,11 +530,10 @@ img {
 }
 
 .social-profiles > img {
-  width: 3rem;
-  height: 3rem;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  background-color: var(--white-color);
   margin-bottom: 1rem;
 }
 
@@ -602,6 +594,9 @@ img {
   }
   .about {
     width: 90%;
+  }
+  .me {
+    padding-inline: 1rem;
   }
   .resume {
     width: 90%;
