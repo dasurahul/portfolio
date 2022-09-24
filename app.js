@@ -59,11 +59,9 @@ skills.forEach((skill) => {
 const menuButton = document.querySelector(".menu-button");
 const menu = document.querySelector(".menu");
 menuButton.addEventListener("click", () => {
-  menu.classList.remove("closed");
   menu.classList.add("opened");
 });
 const closeButton = document.querySelector(".menu-close-button");
 closeButton.addEventListener("click", () => {
-  menu.classList.add("closed");
   menu.classList.remove("opened");
 });

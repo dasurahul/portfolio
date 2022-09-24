@@ -67,7 +67,7 @@ img {
 }
 
 .logo img {
-  width: 9rem;
+  height: 4rem;
 }
 
 .nav ul {
@@ -109,6 +109,7 @@ img {
   display: none;
   background-color: transparent;
   border: none;
+  padding: 0;
 }
 
 .menu-button img {
@@ -117,23 +118,27 @@ img {
 
 .menu {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #000;
+  top: 5rem;
+  width: 90%;
+  padding: 1rem;
+  background-color: var(--primary-dark-color);
   z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   transform: scaleY(0);
+  opacity: 0;
   transform-origin: top;
-  transition: transform 0.5s linear;
+  transition: all 0.25s linear;
 }
 
-.menu > * {
-  opacity: 0;
-  transition: opacity 0.5s linear 0.5s;
+.menu::after {
+  content: "";
+  position: absolute;
+  top: -1rem;
+  right: 0;
+  width: 0;
+  height: 0;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-right: 1rem solid var(--primary-dark-color);
 }
 
 .menu ul {
@@ -144,6 +149,9 @@ img {
   text-align: center;
   text-transform: uppercase;
   font-size: 1.5rem;
+}
+
+.menu li:not(:last-child) {
   margin-bottom: 2rem;
 }
 
@@ -155,34 +163,18 @@ img {
 }
 
 .menu button {
-  background-color: transparent;
   color: var(--white-color);
+  background-color: var(--primary-dark-color);
+  border: 1px solid transparent;
+  font-family: inherit;
   font-size: 1.5rem;
-  border: none;
-  position: absolute;
-  top: 3rem;
-  right: 3rem;
-  opacity: 0;
+  text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .opened {
   transform: scaleY(1);
-}
-
-.opened > ul,
-.opened > button {
   opacity: 1;
-}
-
-.closed {
-  transform: scaleY(0);
-  transition-delay: 1s;
-}
-
-.closed > ul,
-.closed > button {
-  opacity: 0;
-  transition-delay: 0s;
 }
 
 .header-text {
