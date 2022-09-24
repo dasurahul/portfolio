@@ -516,12 +516,12 @@ img {
   gap: 2rem;
 }
 
-.social-profiles h3 {
+.my-profiles h3 {
   font-weight: 500;
   margin-bottom: 2rem;
 }
 
-.social-profiles > img {
+.my-profiles > img {
   width: 5rem;
   height: 5rem;
   object-fit: cover;
@@ -529,18 +529,18 @@ img {
   margin-bottom: 1rem;
 }
 
-.social-profiles p {
+.my-profiles p {
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
-.social-profiles > div {
+.my-profiles > div {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-.social-profiles > div img {
+.my-profiles > div img {
   width: 2rem;
   filter: invert(100%);
 }
